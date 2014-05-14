@@ -8,6 +8,7 @@
 			var bolsaNumeros = [];
 			var aleatorios=[];
 			var contadorPreguntas = 0;
+			var respuestas=[];
 
 			function mostrarSiguientes (){
 				var y = contadorPreguntas;
@@ -17,7 +18,7 @@
 		// for (var y = 0; y < test[0].length; y++) {
 		// 	//Comprobación de todas las componentes del array
 		// 	//console.log("allData[" + x + "][" + y + "]=" + allData[x][y]);
-		// }
+		// }	
 		
 		//Si la imagen es nula, no mostrarla.
 		var img = test[contadorPreguntas][6];
@@ -36,14 +37,16 @@
 
 	}
 }
-$("botonSiguiente").click(function (){
-	mostrarSiguientes();
-});
+
 
 $(document).ready(function() {
 
 
-
+// $('#botonSiguiente').click(function (){
+// 	mostrarSiguientes();
+// });
+$('#botonSiguiente').click(mostrarSiguientes);
+	
 
 
 	function parse(document) {
