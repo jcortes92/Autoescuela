@@ -1,0 +1,25 @@
+Dilluns 12/05/2014, LLMA
+
+Treball XML - Autoescola
+Fer web de preguntes d'exàmen per "Autoescola".
+
+Condicions
+	- 26 Maig
+	- 2 persones, desconegudes
+	- XML, formate obligatori de dades
+	- Imatges bàsiques
+
+Recursos:
+
+	-http://www.anerbarrena.com/jquery-click-1931/
+
+
+Martes 14/05/2014
+	- Borrados todos los respositorios anteriores y creado uno nuevo, el cual contiene todo el proyecto. 
+	- Reparto del trabajo
+		- David: 
+			- hacer que aparezcan las preguntas en paquetes de 3
+			- Cookies, guardar información en navegador
+		- Jorge:
+			- Formulario
+			- Corrección preguntas
