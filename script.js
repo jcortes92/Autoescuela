@@ -11,6 +11,7 @@
 
 			function mostrarSiguientes (){
 				var y = contadorPreguntas;
+				$("#preguntasMostradas").empty();
 				// for (contadorPreguntas; contadorPreguntas < 3; contadorPreguntas++) {
 					for(var x = contadorPreguntas; x < y+3; x++){
 		// for (var y = 0; y < test[0].length; y++) {
