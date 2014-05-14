@@ -1,0 +1,849 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"st",
+				"style	HTML/Element"
+			],
+			[
+				"bus",
+				"buscarMayorde"
+			],
+			[
+				"prom",
+				"prompt	jsWindow"
+			],
+			[
+				"inde",
+				"indexOf	jsArray"
+			],
+			[
+				"arra",
+				"inArray	jQuery"
+			],
+			[
+				"va",
+				"value	jsDOM"
+			],
+			[
+				"last",
+				"lastIndexOf	jsArray"
+			],
+			[
+				"ind",
+				"lastIndexOf	jsArray"
+			],
+			[
+				"aut",
+				"author"
+			],
+			[
+				"pag",
+				"pageY	jQueryEvent"
+			],
+			[
+				"off",
+				"offset	jQuery"
+			],
+			[
+				"page",
+				"pageX	jQueryEvent"
+			],
+			[
+				"set",
+				"setTimeout"
+			],
+			[
+				"clear",
+				"clearRect	jsGraphics"
+			],
+			[
+				"cle",
+				"clearRect	jsGraphics"
+			],
+			[
+				"la",
+				"laberinto"
+			],
+			[
+				"tr",
+				"tr	Tag"
+			],
+			[
+				"setI",
+				"setNamedItem	jsDOM"
+			],
+			[
+				"getE",
+				"getElementsByTagName	jsDOM"
+			],
+			[
+				"dis",
+				"display"
+			],
+			[
+				"strokeT",
+				"strokeText	jsGraphics"
+			],
+			[
+				"fill",
+				"fill	jsGraphics"
+			],
+			[
+				"he",
+				"hechoInstrucciones"
+			],
+			[
+				"intrs",
+				"instrucciones"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"margin",
+				"margin-right"
+			],
+			[
+				"margi",
+				"margin-top"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"preve",
+				"preventDefault	jQueryEvent"
+			],
+			[
+				"getElement",
+				"getElementsByTagName	jsDOM"
+			],
+			[
+				"max",
+				"max-height"
+			],
+			[
+				"div",
+				"divcanvas"
+			],
+			[
+				"inn",
+				"innerHeight	jQuery"
+			],
+			[
+				"KEY",
+				"KEY_RIGHT"
+			],
+			[
+				"don",
+				"down_arrow"
+			],
+			[
+				"tou",
+				"touchend"
+			],
+			[
+				"down",
+				"down_arrow"
+			],
+			[
+				"getEl",
+				"getElementById	jsDOM"
+			],
+			[
+				"tex",
+				"text-top"
+			],
+			[
+				"dra",
+				"drawImage	jsGraphics"
+			],
+			[
+				"game",
+				"gamewin"
+			],
+			[
+				"str",
+				"stroke"
+			],
+			[
+				"pro",
+				"prototype	jsProp"
+			],
+			[
+				"Rect",
+				"Rectangle"
+			],
+			[
+				"stro",
+				"strokeRect	jsGraphics"
+			],
+			[
+				"text",
+				"text"
+			],
+			[
+				"add",
+				"addEventListener	jsEvent"
+			],
+			[
+				"Stroke",
+				"strokeRect	jsGraphics"
+			],
+			[
+				"w",
+				"width	jsScreen"
+			],
+			[
+				"inter",
+				"intersects"
+			],
+			[
+				"Re",
+				"Rectangle"
+			],
+			[
+				"hei",
+				"height	jsScreen"
+			],
+			[
+				"wi",
+				"width	jsScreen"
+			],
+			[
+				"setTim",
+				"setTimeout	jsWindow"
+			],
+			[
+				"las",
+				"lastPress"
+			],
+			[
+				"y",
+				"y"
+			],
+			[
+				"cad",
+				"cadChar"
+			],
+			[
+				"to",
+				"ToString()	String"
+			],
+			[
+				"read",
+				"ReadLine()	String"
+			],
+			[
+				"num",
+				"num_caracteres_a_modificar"
+			],
+			[
+				"name",
+				"nameupdate"
+			],
+			[
+				"Phy",
+				"PhysicsJS"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"bot",
+				"bottom"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"color",
+				"background-color"
+			],
+			[
+				"border",
+				"border-style"
+			],
+			[
+				"border-c",
+				"border-color"
+			],
+			[
+				"lin",
+				"link	HTML/Element"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"a",
+				"append	jQuery"
+			],
+			[
+				"html",
+				"html	jQuery"
+			],
+			[
+				"move",
+				"moveTo	jsGraphics"
+			],
+			[
+				"i",
+				"inline-block"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/preguntas.xml",
+			"settings":
+			{
+				"buffer_size": 74779,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 1197,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "script.js",
+			"settings":
+			{
+				"buffer_size": 1766,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 27.0,
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"sass",
+				"SassBeautify"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"Pac",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 521.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/XML/Fotocopias/1-libros/1-libros.sublime-workspace",
+		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/XML/Fotocopias/1-libros/1-libros.sublime-project",
+		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/XML/Fotocopias/1-libros/libros.html",
+		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/XML/Fotocopias/1-libros/libros.xml",
+		"/Users/jorgecortes/Dropbox/FP ASIX/GBD/ASP NET/Deberes Voluntarios miercoles/SalesDB/SalesDB - PROJECT.txt",
+		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/PreSchoolWebApp/Laberinto/laberinto.js",
+		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/XML/Fotocopias/libros.html",
+		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/XML/Fotocopias/libros.xml",
+		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/XML/Fotocopias/libros.sublime-project",
+		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/PreSchoolWebApp/Laberinto/laberinto.html",
+		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/PreSchoolWebApp/Laberinto/instrucciones.js",
+		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/PreSchoolWebApp/Laberinto/instrucciones.html",
+		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/PreSchoolWebApp/Laberinto DRAGGABLE/laberinto.js",
+		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/PreSchoolWebApp/Laberinto DRAGGABLE/laberinto.html",
+		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/PreSchoolWebApp/Laberinto/index.html",
+		"/Users/jorgecortes/.wine/drive_c/Program Files/Cisco Packet Tracer 6.0.1/help/default/tutorials.htm",
+		"/Users/jorgecortes/Downloads/copia Republica Dominicana.html",
+		"/Users/jorgecortes/Downloads/copia geo Filipinas.html",
+		"/Users/jorgecortes/Downloads/geo Senegal.html",
+		"/Users/jorgecortes/Downloads/Articles.aspx.cs",
+		"/Users/jorgecortes/Dropbox/FP ASIX/GBD/ASP NET/Deberes Voluntarios miercoles/SalesDB/SQL Procedures/Customers.sql",
+		"/Users/jorgecortes/Dropbox/FP ASIX/GBD/ASP NET/Deberes Voluntarios miercoles/SalesDB/SQL Procedures/Points of Sales.sql",
+		"/Users/jorgecortes/Dropbox/FP ASIX/GBD/ASP NET/Deberes Voluntarios miercoles/SalesDB/SQL Procedures/PostCodes.sql",
+		"/Users/jorgecortes/Dropbox/FP ASIX/GBD/ASP NET/Deberes Voluntarios miercoles/SalesDB/SQL Procedures/Shop Asistants.sql",
+		"/Users/jorgecortes/Dropbox/FP ASIX/GBD/ASP NET/Deberes Voluntarios miercoles/SalesDB/SQL Procedures/Suppliers.sql",
+		"/Users/jorgecortes/Dropbox/FP ASIX/GBD/ASP NET/Deberes Voluntarios miercoles/SalesDB/SQL Procedures/Articles.sql",
+		"/Users/jorgecortes/Dropbox/FP ASIX/GBD/ASP NET/Deberes Voluntarios miercoles/SalesDB/SQL Procedures/Categories.sql",
+		"/Users/jorgecortes/Desktop/test.xml",
+		"/Users/jorgecortes/Desktop/EJERCICIOS PRÁCTICOS.xml",
+		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/PreSchoolWebApp/juegoscanvas-blogspot/1 - Mi primer juego/index.html",
+		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/PreSchoolWebApp/juegoscanvas-blogspot/1 - Mi primer juego/mapasmosaico.js",
+		"/Users/jorgecortes/Dropbox/FP ASIX/EXT4/CSharp/CSharp16/Charp16-1/Charp16-1/Program.cs",
+		"/Users/jorgecortes/Dropbox/Public/1 - Mi primer juego/FlameAutoScroll.js",
+		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/PreSchoolWebApp/juegoscanvas-blogspot/mapasmosaico.js",
+		"/Users/jorgecortes/Dropbox/FP ASIX/GBD/GBD - OFIMÁTICA.txt",
+		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/PreSchoolWebApp/juegoscanvas-blogspot/1 - Mi primer juego/game.js",
+		"/Users/jorgecortes/Desktop/Términos y condiciones.txt",
+		"/Users/jorgecortes/Desktop/mazeTEST.html",
+		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/PreSchoolWebApp/juegoscanvas-blogspot/Parte 1/game.js",
+		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/PreSchoolWebApp/juegoscanvas-blogspot/Parte 1/index.html",
+		"/Users/jorgecortes/Dropbox/FP ASIX/GBD/gbd 20140327.sql",
+		"/Users/jorgecortes/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/jorgecortes/Library/Application Support/Sublime Text 2/Packages/User/View In Browser.sublime-settings",
+		"/Users/jorgecortes/Library/Application Support/Sublime Text 2/Packages/User/Chrome.sublime-build",
+		"/Users/jorgecortes/Dropbox/FP ASIX/GBD/gbd 20140324.txt",
+		"/Users/jorgecortes/Dropbox/FP ASIX/EXT4/CSharp/CSharp14/CSharp14-2/CSharp14-2/Program.cs",
+		"/Users/jorgecortes/Dropbox/FP ASIX/EXT4/CSharp/CSharp9/CSharp9-2/CSharp9-2/CSharp9-2/ProgramV1.cs",
+		"/Users/jorgecortes/Dropbox/FP ASIX/GBD/gbd 20140326.txt",
+		"/Users/jorgecortes/Downloads/Backup-codes-jcortesanguita.txt",
+		"/Users/jorgecortes/Downloads/Web Based Sudoku Game for Everybody/index.html",
+		"/Users/jorgecortes/Desktop/gbd 20140324.txt",
+		"/Users/jorgecortes/Desktop/gbd 20140319.txt",
+		"/Users/jorgecortes/Desktop/PhysicsRus_files/base.js",
+		"/Users/jorgecortes/Desktop/PhysicsJS Examples.html",
+		"/Users/jorgecortes/Desktop/PhysicsRus.html",
+		"/Users/jorgecortes/Desktop/PhysicsRus_files/demo_pyramid.js",
+		"/Users/jorgecortes/Downloads/WebSite1/Default.aspx.cs",
+		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/PreSchoolWebApp/DEMO wo VS/css/scss/style.scss",
+		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/PreSchoolWebApp/DEMO wo VS/Index.html",
+		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/PreSchoolWebApp/DEMO wo VS/Scripts/scriptphysics.js",
+		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/PreSchoolWebApp/DEMO wo VS/scripts/PhysicsJS/examples/google-gravity.html",
+		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/PreSchoolWebApp/DEMO wo VS/scripts/main.js",
+		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/PreSchoolWebApp/DEMO Pre-School/DEMO Pre-School/scriptphysics.js",
+		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/PreSchoolWebApp/DEMO Pre-School/DEMO Pre-School/css/scss/style.scss",
+		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/PreSchoolWebApp/DEMO Pre-School/DEMO Pre-School/Index.html",
+		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/PreSchoolWebApp/DEMO Pre-School/DEMO Pre-School/css/style.css",
+		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/PreSchoolWebApp/DEMO Pre-School/DEMO Pre-School/css/scss/style.css",
+		"/Users/jorgecortes/Dropbox/Archivo - FP/Pah Too/DivColor.html",
+		"/Users/jorgecortes/Dropbox/Archivo - FP/Pah Too/jqueryloopcreator/jqueryloopcreator.html",
+		"/Users/jorgecortes/Dropbox/Archivo - FP/Pah Too/jqueryloopcreator/jquery-1.11.0.min.js",
+		"/Users/jorgecortes/Dropbox/Archivo - FP/Pah Too/jqueryloopcreator/ColorCSS.scss",
+		"/Users/jorgecortes/Dropbox/Archivo - FP/Pah Too/jqueryloopcreator/ColorCSS.sass",
+		"/Users/jorgecortes/Dropbox/Archivo - FP/Pah Too/ColorCSS.css",
+		"/Users/jorgecortes/Dropbox/Archivo - FP/Pah Too/jqueryloopcreator.html",
+		"/Users/jorgecortes/Dropbox/Archivo - FP/Pah Too/jqueryloopcreator/ColorCSS.css",
+		"/Users/jorgecortes/Dropbox/Archivo - FP/Pah Too/jqueryloopcreator.css",
+		"/Users/jorgecortes/Dropbox/FP ASIX/EXT4/CSharp/CSharp11/CSharp11/CSharp11/CSharp11-1.cs",
+		"/Users/jorgecortes/Desktop/prueba.cs",
+		"/Users/jorgecortes/Desktop/dahlberg-widgetareas.html",
+		"/Users/jorgecortes/Library/Application Support/Sublime Text 2/Packages/User/sublime-API-Completions-Package.sublime-settings",
+		"/Users/jorgecortes/Library/Application Support/Sublime Text 2/Packages/User/JSON.sublime-settings",
+		"/Users/jorgecortes/Library/Application Support/Sublime Text 2/Packages/User/Package Control.sublime-settings",
+		"/Users/jorgecortes/Library/Application Support/Sublime Text 2/Packages/User/Distraction Free.sublime-settings",
+		"/Users/jorgecortes/Library/Application Support/Sublime Text 2/Packages/User/Plain text.sublime-settings",
+		"/Users/jorgecortes/Dropbox/FP ASIX/EXT4/CSharp/CSharp10/CSharp10/CSharp10/CSharp10-2.cs",
+		"/Users/jorgecortes/Downloads/Instaladores/testdisk-6.14/readme.txt",
+		"/Users/jorgecortes/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"<open files>",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"allData",
+			"pregunta",
+			"row",
+			"reset",
+			"203",
+			"awin",
+			"init",
+			"gamewin",
+			"mycanvas",
+			"canvas2",
+			"20",
+			"10",
+			"100",
+			"test",
+			";\n",
+			"divcanvas",
+			"keydown",
+			"lastPress",
+			"pressing",
+			"win",
+			"press",
+			"lava",
+			"display",
+			"=[];\n",
+			"wall.push(new Rectangle(100,50,10,10));\nwall.push(new Rectangle(100,100,10,10));\nwall.push(new Rectangle(200,50,10,10));\nwall.push(new Rectangle(200,100,10,10));\n",
+			";\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"PREGUNTA",
+			"pregunta",
+			"canvas",
+			"10",
+			"20",
+			"1020",
+			"10"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/preguntas.xml",
+					"settings":
+					{
+						"buffer_size": 74779,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								236,
+								236
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/XML/XML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 24501.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 1197,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								960,
+								960
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 419.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "script.js",
+					"settings":
+					{
+						"buffer_size": 1766,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								962,
+								962
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"libros.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/XML/Fotocopias/1-libros/1-libros.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 264.0,
+	"status_bar_visible": true
+}
