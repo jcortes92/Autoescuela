@@ -4,6 +4,50 @@
 		"selected_items":
 		[
 			[
+				"text",
+				"text-align"
+			],
+			[
+				"siz",
+				"font-size"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"border",
+				"border-color"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"fot",
+				"font-style"
+			],
+			[
+				"fon",
+				"font-style"
+			],
+			[
+				"repla",
+				"replaceWith	jQuery"
+			],
+			[
+				"pre",
+				"preguntasMostradas"
+			],
+			[
+				"mostrar",
+				"mostrarSiguientes"
+			],
+			[
+				"conta",
+				"contadorPreguntas"
+			],
+			[
 				"st",
 				"style	HTML/Element"
 			],
@@ -120,10 +164,6 @@
 				"margin-top"
 			],
 			[
-				"font",
-				"font-family"
-			],
-			[
 				"preve",
 				"preventDefault	jQueryEvent"
 			],
@@ -164,10 +204,6 @@
 				"getElementById	jsDOM"
 			],
 			[
-				"tex",
-				"text-top"
-			],
-			[
 				"dra",
 				"drawImage	jsGraphics"
 			],
@@ -190,10 +226,6 @@
 			[
 				"stro",
 				"strokeRect	jsGraphics"
-			],
-			[
-				"text",
-				"text"
 			],
 			[
 				"add",
@@ -276,10 +308,6 @@
 				"background-color"
 			],
 			[
-				"border",
-				"border-style"
-			],
-			[
 				"border-c",
 				"border-color"
 			],
@@ -311,43 +339,27 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "src/preguntas.xml",
-			"settings":
-			{
-				"buffer_size": 74779,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 1197,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "script.js",
-			"settings":
-			{
-				"buffer_size": 1766,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 27.0,
+		"height": 392.0,
 		"selected_items":
 		[
 			[
-				"install",
-				"Package Control: Install Package"
+				"inden",
+				"Indentation: Reindent Lines"
 			],
 			[
 				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
 				"Package Control: Install Package"
 			],
 			[
@@ -375,15 +387,11 @@
 				"Package Control: Install Package"
 			],
 			[
-				"insta",
-				"Package Control: Install Package"
-			],
-			[
 				"inst",
 				"Package Control: Install Package"
 			]
 		],
-		"width": 521.0
+		"width": 575.0
 	},
 	"console":
 	{
@@ -400,6 +408,12 @@
 	},
 	"file_history":
 	[
+		"/Users/jorgecortes/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/Autoescuela/index.html",
+		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/Autoescuela/src/preguntas.xml",
+		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/Autoescuela/script.js",
+		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/Autoescuela/guion-documentación proyecto.txt",
+		"/Users/jorgecortes/Desktop/LLMA Autoescuela/Guion proyecto Autoescuela",
 		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/XML/Fotocopias/1-libros/1-libros.sublime-workspace",
 		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/XML/Fotocopias/1-libros/1-libros.sublime-project",
 		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/XML/Fotocopias/1-libros/libros.html",
@@ -441,7 +455,6 @@
 		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/PreSchoolWebApp/juegoscanvas-blogspot/Parte 1/game.js",
 		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/PreSchoolWebApp/juegoscanvas-blogspot/Parte 1/index.html",
 		"/Users/jorgecortes/Dropbox/FP ASIX/GBD/gbd 20140327.sql",
-		"/Users/jorgecortes/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 		"/Users/jorgecortes/Library/Application Support/Sublime Text 2/Packages/User/View In Browser.sublime-settings",
 		"/Users/jorgecortes/Library/Application Support/Sublime Text 2/Packages/User/Chrome.sublime-build",
 		"/Users/jorgecortes/Dropbox/FP ASIX/GBD/gbd 20140324.txt",
@@ -494,9 +507,10 @@
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 0.0,
 		"where_history":
 		[
+			"",
 			"<open files>",
 			""
 		]
@@ -506,6 +520,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"x",
 			"allData",
 			"pregunta",
 			"row",
@@ -539,6 +554,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"contadorPreguntas",
 			"PREGUNTA",
 			"pregunta",
 			"canvas",
@@ -556,223 +572,8 @@
 	"groups":
 	[
 		{
-			"selected": 2,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "src/preguntas.xml",
-					"settings":
-					{
-						"buffer_size": 74779,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								236,
-								236
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close"
-							],
-							"syntax": "Packages/XML/XML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 24501.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "index.html",
-					"settings":
-					{
-						"buffer_size": 1197,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								960,
-								960
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close"
-							],
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 419.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "script.js",
-					"settings":
-					{
-						"buffer_size": 1766,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								962,
-								962
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close"
-							],
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -843,7 +644,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 264.0,
 	"status_bar_visible": true
 }
