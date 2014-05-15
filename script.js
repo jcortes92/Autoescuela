@@ -68,31 +68,7 @@ $(document).ready(function() {
 		for (var i =0;i<30;i++){
 			test[i] = allData[aleatorios[i]]
 		}
-
-	//console.log(allData);
-	// for (contadorPreguntas; contadorPreguntas < 3; contadorPreguntas++) {
-	// 	// for (var y = 0; y < test[0].length; y++) {
-	// 	// 	//Comprobación de todas las componentes del array
-	// 	// 	//console.log("allData[" + x + "][" + y + "]=" + allData[x][y]);
-	// 	// }
-
-	// 	//Si la imagen es nula, no mostrarla.
-	// 	var img = test[contadorPreguntas][6];
-	// 	if(img!="no_image.png") img = '<img src="src/imagenes/'+ test[contadorPreguntas][6]+'"" style="float:right;" >';
-	// 	else img = "";
-
-	// 	//Pasar de mostrar todas a mostrarlas en paquetes de tres, reemplazando las que haya en pantalla.
-	// 	$("#preguntasMostradas").append('<div class="preguntas"><br/>'+img+
-	// 		'<p class="pregunta">' + (contadorPreguntas+1).toString()+'. '+test[contadorPreguntas][0] + '</p>' + 
-	// 		'<div class="respuesta"'+
-	// 		'<li><ol><input type="radio" name="'+contadorPreguntas+'" value="1" >a) ' + test[contadorPreguntas][1] + '</ol>'+
-	// 	'<ol><input type="radio"name="'+contadorPreguntas+'" value="2">b) ' + test[contadorPreguntas][2]+'</ol>'+
-	// 	'<ol><input type="radio"name="'+contadorPreguntas+'" value="3">c) ' + test[contadorPreguntas][3]+'</ol>'+
-	// 	'</li></div></div>');
-
-	mostrarSiguientes();
-
-
+		mostrarSiguientes();
 	}
 
 
