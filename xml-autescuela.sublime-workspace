@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"margi",
+				"margin"
+			],
+			[
 				"text",
 				"text-align"
 			],
@@ -158,10 +162,6 @@
 			[
 				"margin",
 				"margin-right"
-			],
-			[
-				"margi",
-				"margin-top"
 			],
 			[
 				"preve",
@@ -343,9 +343,13 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 149.0,
 		"selected_items":
 		[
+			[
+				"close",
+				"Project: Close"
+			],
 			[
 				"inden",
 				"Indentation: Reindent Lines"
@@ -391,7 +395,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 575.0
+		"width": 521.0
 	},
 	"console":
 	{
@@ -408,11 +412,17 @@
 	},
 	"file_history":
 	[
-		"/Users/jorgecortes/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
-		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/Autoescuela/index.html",
-		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/Autoescuela/src/preguntas.xml",
-		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/Autoescuela/script.js",
 		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/Autoescuela/guion-documentación proyecto.txt",
+		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/Autoescueladcab/xml-autescuela.sublime-project",
+		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/Autoescuela/index.html",
+		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/Autoescuela/script.js",
+		"/Users/jorgecortes/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/jorgecortes/Library/Application Support/Sublime Text 2/Packages/User/Distraction Free.sublime-settings",
+		"/Users/jorgecortes/Library/Application Support/Sublime Text 2/Packages/User/JavaScript.sublime-settings",
+		"/Users/jorgecortes/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/jorgecortes/Library/Application Support/Sublime Text 2/Packages/User/SublimeServer.sublime-settings",
+		"/Users/jorgecortes/Library/Application Support/Sublime Text 2/Packages/User/JSON.sublime-settings",
+		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/Autoescuela/src/preguntas.xml",
 		"/Users/jorgecortes/Desktop/LLMA Autoescuela/Guion proyecto Autoescuela",
 		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/XML/Fotocopias/1-libros/1-libros.sublime-workspace",
 		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/XML/Fotocopias/1-libros/1-libros.sublime-project",
@@ -493,13 +503,10 @@
 		"/Users/jorgecortes/Desktop/prueba.cs",
 		"/Users/jorgecortes/Desktop/dahlberg-widgetareas.html",
 		"/Users/jorgecortes/Library/Application Support/Sublime Text 2/Packages/User/sublime-API-Completions-Package.sublime-settings",
-		"/Users/jorgecortes/Library/Application Support/Sublime Text 2/Packages/User/JSON.sublime-settings",
 		"/Users/jorgecortes/Library/Application Support/Sublime Text 2/Packages/User/Package Control.sublime-settings",
-		"/Users/jorgecortes/Library/Application Support/Sublime Text 2/Packages/User/Distraction Free.sublime-settings",
 		"/Users/jorgecortes/Library/Application Support/Sublime Text 2/Packages/User/Plain text.sublime-settings",
 		"/Users/jorgecortes/Dropbox/FP ASIX/EXT4/CSharp/CSharp10/CSharp10/CSharp10/CSharp10-2.cs",
-		"/Users/jorgecortes/Downloads/Instaladores/testdisk-6.14/readme.txt",
-		"/Users/jorgecortes/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings"
+		"/Users/jorgecortes/Downloads/Instaladores/testdisk-6.14/readme.txt"
 	],
 	"find":
 	{
@@ -520,6 +527,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"titles",
 			"x",
 			"allData",
 			"pregunta",
@@ -636,7 +644,7 @@
 		[
 			[
 				"",
-				"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/XML/Fotocopias/1-libros/1-libros.sublime-project"
+				"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/Autoescuela/xml-autescuela.sublime-project"
 			]
 		],
 		"width": 380.0
