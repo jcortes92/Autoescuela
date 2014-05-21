@@ -2,7 +2,7 @@
 * @author Jorge Cortés
 */
 // (function() {
-var test = [];
+var test = []; //conjunto de 30 preguntas aleatorias
 var allData = []; //contenedor de contenedores de preguntas. Cada elemento será un array conteniendo una pregunta completa (con todos sus elementos)
 var bolsaNumeros = [];
 var aleatorios=[];
@@ -24,59 +24,60 @@ function mostrarPreguntas(){
 		else img = "";
 
 		$("#preguntasMostradas").append('<div class="preguntas"><br/>'+img+
-		'<p class="pregunta"><span class="numPregunta">' + (contadorPreguntas+1).toString()+'.</span>'+test[contadorPreguntas][0] + '</p>' + 
-		'<div class="respuesta"'+
-		'<li><ol><input type="radio" name="'+contadorPreguntas+'" value="1" >a) ' + test[contadorPreguntas][1] + '</ol>'+
+			'<p class="pregunta"><span class="numPregunta">' + (contadorPreguntas+1).toString()+'.</span>'+test[contadorPreguntas][0] + '</p>' + 
+			'<div class="respuesta"'+
+			'<li><ol><input type="radio" name="'+contadorPreguntas+'" value="1" >a) ' + test[contadorPreguntas][1] + '</ol>'+
 		'<ol><input type="radio"name="'+contadorPreguntas+'" value="2">b) ' + test[contadorPreguntas][2]+'</ol>'+
 		'<ol><input type="radio"name="'+contadorPreguntas+'" value="3">c) ' + test[contadorPreguntas][3]+'</ol>'+
 		'</li></div></div>');
 
 		contadorPreguntas++;	
 	}
+	visibilidadBotones();
 }
 
-function restaurarRespuestasOLD(){
-	for(var x = contadorPreguntas; x < y+3; x++){
+// function restaurarRespuestasOLD(){
+// 	for(var x = contadorPreguntas; x < y+3; x++){
 
-			switch (respuestas[contadorPreguntas]) {
-				case undefined:{$("#preguntasMostradas").append('<div class="preguntas"><br/>'+img+
-			'<p class="pregunta"><span class="numPregunta">' + (contadorPreguntas+1).toString()+'.</span>'+test[contadorPreguntas][0] + '</p>' + 
-			'<div class="respuesta"'+
-			'<li><ol><input type="radio" name="'+contadorPreguntas+'" value="1" >a) ' + test[contadorPreguntas][1] + '</ol>'+
-			'<ol><input type="radio"name="'+contadorPreguntas+'" value="2">b) ' + test[contadorPreguntas][2]+'</ol>'+
-			'<ol><input type="radio"name="'+contadorPreguntas+'" value="3">c) ' + test[contadorPreguntas][3]+'</ol>'+
-			'</li></div></div>');}break;
-				case 1: $("#preguntasMostradas").append('<div class="preguntas"><br/>'+img+
-					'<p class="pregunta"><span class="numPregunta">' + (contadorPreguntas+1).toString()+'.</span>'+test[contadorPreguntas][0] + '</p>' + 
-					'<div class="respuesta"'+
-					'<li><ol><input type="radio" name="'+contadorPreguntas+'" value="1" checked="checked">a) ' + test[contadorPreguntas][1] + '</ol>'+
-					'<ol><input type="radio"name="'+contadorPreguntas+'" value="2">b) ' + test[contadorPreguntas][2]+'</ol>'+
-					'<ol><input type="radio"name="'+contadorPreguntas+'" value="3">c) ' + test[contadorPreguntas][3]+'</ol>'+
-					'</li></div></div>');
-					break;
+// 			switch (respuestas[contadorPreguntas]) {
+// 				case undefined:{$("#preguntasMostradas").append('<div class="preguntas"><br/>'+img+
+// 			'<p class="pregunta"><span class="numPregunta">' + (contadorPreguntas+1).toString()+'.</span>'+test[contadorPreguntas][0] + '</p>' + 
+// 			'<div class="respuesta"'+
+// 			'<li><ol><input type="radio" name="'+contadorPreguntas+'" value="1" >a) ' + test[contadorPreguntas][1] + '</ol>'+
+// 			'<ol><input type="radio"name="'+contadorPreguntas+'" value="2">b) ' + test[contadorPreguntas][2]+'</ol>'+
+// 			'<ol><input type="radio"name="'+contadorPreguntas+'" value="3">c) ' + test[contadorPreguntas][3]+'</ol>'+
+// 			'</li></div></div>');}break;
+// 				case 1: $("#preguntasMostradas").append('<div class="preguntas"><br/>'+img+
+// 					'<p class="pregunta"><span class="numPregunta">' + (contadorPreguntas+1).toString()+'.</span>'+test[contadorPreguntas][0] + '</p>' + 
+// 					'<div class="respuesta"'+
+// 					'<li><ol><input type="radio" name="'+contadorPreguntas+'" value="1" checked="checked">a) ' + test[contadorPreguntas][1] + '</ol>'+
+// 					'<ol><input type="radio"name="'+contadorPreguntas+'" value="2">b) ' + test[contadorPreguntas][2]+'</ol>'+
+// 					'<ol><input type="radio"name="'+contadorPreguntas+'" value="3">c) ' + test[contadorPreguntas][3]+'</ol>'+
+// 					'</li></div></div>');
+// 					break;
 
-				case 2: $("#preguntasMostradas").append('<div class="preguntas"><br/>'+img+
-					'<p class="pregunta"><span class="numPregunta">' + (contadorPreguntas+1).toString()+'.</span>'+test[contadorPreguntas][0] + '</p>' + 
-					'<div class="respuesta"'+
-					'<li><ol><input type="radio" name="'+contadorPreguntas+'" value="1">a) ' + test[contadorPreguntas][1] + '</ol>'+
-					'<ol><input type="radio"name="'+contadorPreguntas+'" value="2" checked="checked">b) ' + test[contadorPreguntas][2]+'</ol>'+
-					'<ol><input type="radio"name="'+contadorPreguntas+'" value="3">c) ' + test[contadorPreguntas][3]+'</ol>'+
-					'</li></div></div>');
-					break;
+// 				case 2: $("#preguntasMostradas").append('<div class="preguntas"><br/>'+img+
+// 					'<p class="pregunta"><span class="numPregunta">' + (contadorPreguntas+1).toString()+'.</span>'+test[contadorPreguntas][0] + '</p>' + 
+// 					'<div class="respuesta"'+
+// 					'<li><ol><input type="radio" name="'+contadorPreguntas+'" value="1">a) ' + test[contadorPreguntas][1] + '</ol>'+
+// 					'<ol><input type="radio"name="'+contadorPreguntas+'" value="2" checked="checked">b) ' + test[contadorPreguntas][2]+'</ol>'+
+// 					'<ol><input type="radio"name="'+contadorPreguntas+'" value="3">c) ' + test[contadorPreguntas][3]+'</ol>'+
+// 					'</li></div></div>');
+// 					break;
 
-				case 3: $("#preguntasMostradas").append('<div class="preguntas"><br/>'+img+
-					'<p class="pregunta"><span class="numPregunta">' + (contadorPreguntas+1).toString()+'.</span>'+test[contadorPreguntas][0] + '</p>' + 
-					'<div class="respuesta"'+
-					'<li><ol><input type="radio" name="'+contadorPreguntas+'" value="1">a) ' + test[contadorPreguntas][1] + '</ol>'+
-					'<ol><input type="radio"name="'+contadorPreguntas+'" value="2">b) ' + test[contadorPreguntas][2]+'</ol>'+
-					'<ol><input type="radio"name="'+contadorPreguntas+'" value="3" checked="checked">c) ' + test[contadorPreguntas][3]+'</ol>'+
-					'</li></div></div>');
-					break;
-			
-		}
-		contadorPreguntas++;		
-	}
-}
+// 				case 3: $("#preguntasMostradas").append('<div class="preguntas"><br/>'+img+
+// 					'<p class="pregunta"><span class="numPregunta">' + (contadorPreguntas+1).toString()+'.</span>'+test[contadorPreguntas][0] + '</p>' + 
+// 					'<div class="respuesta"'+
+// 					'<li><ol><input type="radio" name="'+contadorPreguntas+'" value="1">a) ' + test[contadorPreguntas][1] + '</ol>'+
+// 					'<ol><input type="radio"name="'+contadorPreguntas+'" value="2">b) ' + test[contadorPreguntas][2]+'</ol>'+
+// 					'<ol><input type="radio"name="'+contadorPreguntas+'" value="3" checked="checked">c) ' + test[contadorPreguntas][3]+'</ol>'+
+// 					'</li></div></div>');
+// 					break;
+
+// 		}
+// 		contadorPreguntas++;		
+// 	}
+// }
 function setRespuestas(){
 	var y = contadorPreguntas;
 	var TEMPcontadorPreguntas = contadorPreguntas-3;
@@ -89,8 +90,6 @@ function setRespuestas(){
 	}
 }
 
-
-
 function getRespuestas(){
 	var y = contadorPreguntas;
 	var TEMPcontadorPreguntas = contadorPreguntas-3;
@@ -102,9 +101,19 @@ function getRespuestas(){
 	}
 }
 
-
-
-
+function visibilidadBotones(){
+	if(contadorPreguntas<=3)
+	{
+		$("#botonAnterior").hide();
+	} 
+	else 
+		if(contadorPreguntas>3){
+			$("#botonAnterior").show();
+		}
+	if(contadorPreguntas>=29){
+		$("#botonSiguiente").hide();
+	}
+}
 // //VERSIÓN ANTIGUA
 // function mostrarSiguientes (){
 // 	var y = contadorPreguntas;
@@ -228,27 +237,19 @@ function getRespuestas(){
 
 $(document).ready(function() {
 
+	$('#botonSiguiente').click(function(){
+		getRespuestas();
+		mostrarPreguntas();
+		setRespuestas();
+	});
 
-	// $('#botonSiguiente').click(function (){
-	// 	mostrarSiguientes();
-	// });
-	//VERSIÓN ANTIGUA
-	// $('#botonSiguiente').click(almacenarRespuestasAdelante);
-	// $('#botonAnterior').click(mostrarAnteriores);
-//Nueva versión
-$('#botonSiguiente').click(function(){
-	getRespuestas();
-	mostrarPreguntas();
-	setRespuestas();
+	$('#botonAnterior').click(function(){
+		getRespuestas();
+		contadorPreguntas -= 6;
+		mostrarPreguntas();
+		setRespuestas();
+	});
 
-});
-$('#botonAnterior').click(function(){
-	getRespuestas();
-	contadorPreguntas -= 6;
-	mostrarPreguntas();
-	setRespuestas();
-
-});
 
 	function parse(document) {
 		$(document).find("PREGUNTA").each(function() {
@@ -264,32 +265,32 @@ $('#botonAnterior').click(function(){
 		allData.push(item);
 		// console.log(item);
 		// console.log(allData);
-		});
+	});
 
 		//SELECCIÓN ALEATORIA DE PREGUNTAS DE LA BASE DE DATOS
 		for(var i=0;i<allData.length;i++){
 		bolsaNumeros[i] = i; //aqui tenemos los 140 numeros posibles
-		}
-		for(var i=0;i<30;i++){
-			aleatorios[i] = Math.floor((Math.random() * bolsaNumeros.length)+1);
-			bolsaNumeros.splice(aleatorios[i],1);
-		}
-		for (var i =0;i<30;i++){
-			test[i] = allData[aleatorios[i]]
-		}		
-		mostrarPreguntas();		
 	}
+	for(var i=0;i<30;i++){
+		aleatorios[i] = Math.floor((Math.random() * bolsaNumeros.length)+1);
+		bolsaNumeros.splice(aleatorios[i],1);
+	}
+	for (var i =0;i<30;i++){
+		test[i] = allData[aleatorios[i]]
+	}		
+	mostrarPreguntas();		
+}
 
 
 
-	$.ajax({
+$.ajax({
 	url : 'src/preguntas.xml', // name of file you want to parse
 	dataType : "xml",
 	success : parse,
 	error : function() {
 		alert("Error: Something went wrong");
 	}
-	});
+});
 
 
 
