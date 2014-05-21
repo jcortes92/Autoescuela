@@ -267,8 +267,8 @@ $(document).ready(function() {
 		// console.log(allData);
 	});
 
-		//SELECCIÓN ALEATORIA DE PREGUNTAS DE LA BASE DE DATOS
-		for(var i=0;i<allData.length;i++){
+	//SELECCIÓN ALEATORIA DE PREGUNTAS DE LA BASE DE DATOS
+	for(var i=0;i<allData.length;i++){
 		bolsaNumeros[i] = i; //aqui tenemos los 140 numeros posibles
 	}
 	for(var i=0;i<30;i++){
