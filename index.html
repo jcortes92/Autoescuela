@@ -51,8 +51,26 @@
 		height: 30%;
 
 	}
+
+	.acierto {
+		background-color: green;
+	}
+
+	.error {
+		background-color: red;
+	}
+	
 	.pregunta{
 		font-size: 110%;
+	}
+
+	.resRespuesta{
+		width: 80%;
+		margin-left: 10px;
+		inline:block;
+		height: 30%;
+		font-size: 110%;
+		line-height: 2.4em;
 	}
 	.numPregunta{
 		font-weight: bolder;
@@ -73,7 +91,7 @@
 	input{
 		margin: 10px;
 	}
-	#botonAnterior, #botonSiguiente{
+	#botonAnterior, #botonSiguiente, #botonCorregir {
 		top:0%;
 		font-size: 200%;
 	}
@@ -101,7 +119,8 @@
 				<!-- <input type="submit" id="botonEnviar" value="Enviar"> -->
 				<div id="preguntasMostradas"></div>
 				<input type="button" id="botonAnterior" value="Anterior">
-				<input type="button" id="botonSiguiente" value="Siguiente">						
+				<input type="button" id="botonSiguiente" value="Siguiente">
+				<input type="button" id="botonCorregir" value="Corregir">				
 			<form>
 		</div>
 		

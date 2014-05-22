@@ -11,6 +11,8 @@ var respuestas=[]; //contenedor para las respuestas
 
 
 
+
+
 //versión refactorizada
 function mostrarPreguntas(){
 	var y = contadorPreguntas;
@@ -102,7 +104,65 @@ function getRespuestas(){
 	}
 }
 
+function mostrarResultado() {
+	var pfalladas=0;
+	var pcontestadas=0;
+	var pacertadas=0;
+	var presultado=0;
 
+	$("#preguntasMostradas").empty();
+
+	for(var x = 0; x < 30; x++) {
+		if (respuestas[x] != test[x][4]) {
+			pfalladas++;
+			
+		}
+		else {
+			pacertadas++;
+		}
+
+		if (respuestas[x] != undefined) {
+			pcontestadas++;
+		}
+	}
+	if (pfalladas > 2) {
+		presultado = "SUSPENDIDO"
+	}
+	else {
+		presultado = "APROBADO"
+	}
+	//Muestra la cabecera con la estadística.
+	$("#preguntasMostradas").append('<div class="preguntas"><br/> ' +
+				'<li><ol>' + 'Preguntas contestadas: ' + pcontestadas + '</ol>' +
+				'<ol>' + 'Preguntas acertadas: ' + pacertadas + '</ol>' +
+				'<ol>' + 'Preguntas falladas: ' + pfalladas + '</ol>' +
+				'<ol>' + 'Resultado: ' + presultado + '</ol></li>')				
+	//Muestra las preguntas.
+	for (var x = 0; x < 30; x++) {
+		//Si la imagen es nula, no mostrarla.
+		var img = test[x][6];
+		if(img!="no_image.png") img = '<img src="src/imagenes/'+ test[x][6]+'"" style="float:right;" >';
+		else img = "";
+
+		$("#preguntasMostradas").append('<div class="preguntas"><br/>'+img+
+			'<p class="pregunta"><span class="numPregunta">' + (x+1).toString()+'.</span>'+test[x][0] + '</p>' + 
+			'<div class="resRespuesta"'+
+			'<li><ol><input type="radio" name="'+x+'" value="1" style="display:none">a) ' + test[x][1] + '</ol>'+
+			'<ol><input type="radio"name="'+x+'" value="2" style="display:none">b) ' + test[x][2]+'</ol>'+
+			'<ol><input type="radio"name="'+x+'" value="3" style="display:none">c) ' + test[x][3]+'</ol>'+
+			'</li></div></div>');
+	}
+	//Muestra las respuestas correctas e incorrectas.
+	for(var x = 0; x < 30; x++) {		
+		var $radios = $('input:radio[name='+x+']');
+		$radios.filter('[value='+test[x][4]+']').parent().addClass("acierto");
+
+		if (respuestas[x] != test[x][4]) {			
+			var $radios = $('input:radio[name='+x+']');
+			$radios.filter('[value='+respuestas[x]+']').parent().addClass("error");
+		}		
+	}
+}
 
 
 // //VERSIÓN ANTIGUA
@@ -248,6 +308,9 @@ $('#botonAnterior').click(function(){
 	mostrarPreguntas();
 	setRespuestas();
 
+});
+$('#botonCorregir').click(function(){
+	mostrarResultado();
 });
 
 	function parse(document) {
