@@ -61,7 +61,8 @@ function getRespuestas(){
 }
 
 function visibilidadBotones(){
-	// $("#botonCorregir").hide();
+	if(test.length==30) $("#botonCorregir").hide();
+	
 	if(contadorPreguntas<=3)
 	{
 		$("#botonAnterior").hide();
@@ -131,8 +132,12 @@ function mostrarResultado() {
 
 		var $radios = $('input:radio[name='+x+']');
 		
+
 		if(isNaN(respuestas[x])||(respuestas[x]=='undefined')){
 			$radios.parent().addClass("error");
+
+
+
 		} else
 			if (respuestas[x] != test[x][4]) {			
 				// var $radios = $('input:radio[name='+x+']');
@@ -140,8 +145,7 @@ function mostrarResultado() {
 			}	 else {
 				$radios.filter('[value='+test[x][4]+']').parent().addClass("acierto");
 		}
-		
-
+$radios.filter('[value='+test[x][4]+']').parent().removeClass("error").addClass("acierto");
 			
 	}
 }
