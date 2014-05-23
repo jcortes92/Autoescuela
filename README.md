@@ -18,6 +18,6 @@ Interacción con el usuario
 HTML5 y CSS3 para la estructura de la página y la apariencia
 La aplicación
 
-Se puede acceder a la aplicación desde este enlace.
+Se puede acceder a la aplicación desde .[este enlace](http://www.jorge-cortes.es/ASIX/LLMA/Autoescuela/index.html "Atuoescuela - Test")
 
 Ya es completamente funcionalTodavía no es la versión final. Falta añadir el módulo de comprobación de respuestas y darle estilo al diseño de la página.
