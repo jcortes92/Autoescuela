@@ -9,15 +9,18 @@ Este proyecto consiste en la realización de una aplicación web que permita rea
 
 ##Tecnologías empleadas
 
-XML, como base de datos de las preguntas
-AJAX, para parsear el XML y poder manejar los datos con mucha facilidad.
-jQuery, lógica de los tests
-Selección aleatoria de preguntas
-Mostrar preguntas en grupos de 3
-Interacción con el usuario
-HTML5 y CSS3 para la estructura de la página y la apariencia
-La aplicación
+- XML, como base de datos de las preguntas
+- AJAX, para parsear el XML y poder manejar los datos con mucha facilidad.
+- jQuery, lógica de los tests
+- Selección aleatoria de preguntas
+- Mostrar preguntas en grupos de 3
+- Interacción con el usuario
+- HTML5 y CSS3 para la estructura de la página y la apariencia
+
+Del proyecto [Autoescuela de @RaulMoyaReyes](https://github.com/RaulMoyaReyes/autoescuela/blob/master/web/extra/BDfile.sql) obtuvimos la base de datos de preguntas y respuestas de tests de Tráfico.
+
+##La aplicación
 
 Se puede acceder a la aplicación desde [este enlace](http://www.jorge-cortes.es/ASIX/LLMA/Autoescuela/index.html "Atuoescuela - Test").
 
-Ya es completamente funcionalTodavía no es la versión final. Falta añadir el módulo de comprobación de respuestas y darle estilo al diseño de la página.
+Ya es completamente funcional<s>Todavía no es la versión final</s>. Falta <s>añadir el módulo de comprobación de respuestas y </s>darle estilo al diseño de la página.
