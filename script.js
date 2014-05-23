@@ -6,6 +6,10 @@ var bolsaNumeros = [];
 var aleatorios=[];
 var contadorPreguntas = 0;
 var respuestas=[]; //contenedor para las respuestas
+var pfalladas=0;
+	var pcontestadas=0;
+	var pacertadas=0;
+	var presultado=0;
 
 
 
@@ -57,19 +61,90 @@ function getRespuestas(){
 }
 
 function visibilidadBotones(){
+	// $("#botonCorregir").hide();
 	if(contadorPreguntas<=3)
 	{
 		$("#botonAnterior").hide();
 	} 
 	else 
 		if(contadorPreguntas>3){
+			if(contadorPreguntas>=29){
+				$("#botonSiguiente").hide();
+				$("#botonCorregir").show();
+			} else {
+
+			}
 			$("#botonAnterior").show();
 		}
-	if(contadorPreguntas>=29){
-		$("#botonSiguiente").hide();
-	}
+	
 }
 
+function comprobarRespuestas(){
+	for(var x = 0; x < 30; x++) {
+		if (respuestas[x] != test[x][4]) {
+			pfalladas++;
+
+		}
+		else {
+			pacertadas++;
+		}
+
+		if (respuestas[x] != undefined) {
+			pcontestadas++;
+		}
+	}
+	if (pfalladas > 2) {
+		presultado = "SUSPENDIDO"
+	}
+	else {
+		presultado = "APROBADO"
+	}}
+	
+function mostrarResultado() {
+
+	$("#preguntasMostradas").empty();
+	//Muestra la cabecera con la estadística.
+	$("#preguntasMostradas").append('<div class="preguntas"><br/> ' +
+				'<ol>' + 'Preguntas contestadas: ' + pcontestadas + '</ol>' +
+				'<ol>' + 'Preguntas acertadas: ' + pacertadas + '</ol>' +
+				'<ol>' + 'Preguntas falladas: ' + pfalladas + '</ol>' +
+				'<ol>' + 'Resultado: ' + presultado + '</ol>')				
+	//Muestra las preguntas.
+	for (var x = 0; x < 30; x++) {
+
+		//Si la imagen es nula, no mostrarla.
+		var img = test[x][6];
+		if(img!="no_image.png") img = '<img src="src/imagenes/'+ test[x][6]+'"" style="float:right;" >';
+		else img = "";
+
+		$("#preguntasMostradas").append('<div class="preguntas"><br/>'+img+
+			'<p class="pregunta"><span class="numPregunta">' + (x+1).toString()+'.</span>'+test[x][0] + '</p>' + 
+			'<div class="resRespuesta"'+
+			'<li><ol><input type="radio" name="'+x+'" value="1" style="display:none">a) ' + test[x][1] + '</ol>'+
+			'<ol><input type="radio"name="'+x+'" value="2" style="display:none">b) ' + test[x][2]+'</ol>'+
+			'<ol><input type="radio"name="'+x+'" value="3" style="display:none">c) ' + test[x][3]+'</ol>'+
+			'</li></div></div>');
+	}
+
+	//Muestra las respuestas correctas e incorrectas.
+	for(var x = 0; x < 30; x++) {		
+
+		var $radios = $('input:radio[name='+x+']');
+		
+		if(isNaN(respuestas[x])||(respuestas[x]=='undefined')){
+			$radios.parent().addClass("error");
+		} else
+			if (respuestas[x] != test[x][4]) {			
+				// var $radios = $('input:radio[name='+x+']');
+				$radios.filter('[value='+respuestas[x]+']').parent().addClass("error");
+			}	 else {
+				$radios.filter('[value='+test[x][4]+']').parent().addClass("acierto");
+		}
+		
+
+			
+	}
+}
 
 $(document).ready(function() {
 
@@ -86,6 +161,11 @@ $(document).ready(function() {
 		setRespuestas();
 	});
 
+	$('#botonCorregir').click(function(){
+		getRespuestas();
+		comprobarRespuestas();
+		mostrarResultado();
+	});
 
 	function parse(document) {
 		$(document).find("PREGUNTA").each(function() {
