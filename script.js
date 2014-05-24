@@ -5,6 +5,7 @@ var allData = []; //contenedor de contenedores de preguntas. Cada elemento será
 var bolsaNumeros = [];
 var aleatorios=[];
 var contadorPreguntas = 0;
+var contadorNuevoTest = contadorPreguntas + 1;
 var respuestas=[]; //contenedor para las respuestas
 var pfalladas=0;
 var pcontestadas=0;
@@ -12,7 +13,6 @@ var pacertadas=0;
 var presultado=0;
 var contadorTest=0;
 var contadorTestAprobados=0;
-
 
 
 
@@ -61,23 +61,31 @@ function getRespuestas(){
 		TEMPcontadorPreguntas++;
 	}
 }
-
+1
 function visibilidadBotones(){
-	$("#botonCorregir").hide();
+	$("#botonSiguiente").show();
 	$("#botonAnterior").hide();
 	$("#botonNuevoTest").hide();
+	$("#botonCorregir").hide();
 	
-	if(contadorPreguntas>3){
+	if(contadorPreguntas > 3){
 		$("#botonAnterior").show();
 	}
 	
-	if(contadorPreguntas>=29){
+	if(contadorPreguntas == 30){
 		$("#botonSiguiente").hide();
 		$("#botonCorregir").show();
-	}	
+	}
+
+	if(contadorPreguntas > 30){
+		$("#botonNuevoTest").show();
+		$("#botonSiguiente").hide();
+		$("#botonAnterior").hide();
+	}		
 }
 
 function comprobarRespuestas(){
+	contadorPreguntas++;
 	for(var x = 0; x < 30; x++) {
 		if (respuestas[x] != test[x][4]) {
 			pfalladas++;
@@ -177,9 +185,10 @@ $(document).ready(function() {
 				else {
 					centinela=true;
 				}
-			}
-			if(centinela) {
+			}			
+			if(centinela) {				
 				comprobarRespuestas();
+				visibilidadBotones();				
 				mostrarResultado();
 			}			
 		}
