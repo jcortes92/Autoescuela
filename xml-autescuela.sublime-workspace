@@ -4,8 +4,24 @@
 		"selected_items":
 		[
 			[
+				"back",
+				"background-color"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"paddin",
+				"padding-top"
+			],
+			[
 				"contador",
-				"contadorTest"
+				"contadorPreguntas"
+			],
+			[
+				"t",
+				"text-indent"
 			],
 			[
 				"conta",
@@ -54,10 +70,6 @@
 			[
 				"border",
 				"border-color"
-			],
-			[
-				"font",
-				"font-size"
 			],
 			[
 				"fot",
@@ -701,7 +713,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 284.0,
 	"status_bar_visible": true
 }

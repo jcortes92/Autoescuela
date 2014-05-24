@@ -120,11 +120,11 @@ function mostrarResultado() {
 
 	$("#preguntasMostradas").empty();
 	//Muestra la cabecera con la estadística.
-	$("#preguntasMostradas").append('<div class="preguntas"><br/> ' +
+	$("#preguntasMostradas").append('<div class="estadistica"><br/> ' +
 				'<ol>' + 'Preguntas contestadas: ' + pcontestadas + '</ol>' +
 				'<ol>' + 'Preguntas acertadas: ' + pacertadas + '</ol>' +
 				'<ol>' + 'Preguntas falladas: ' + pfalladas + '</ol>' +
-				'<ol>' + 'Resultado: ' + presultado + '</ol>')				
+				'<ol>' + 'Resultado: ' + presultado + '</ol></id>')				
 	//Muestra las preguntas.
 	for (var x = 0; x < 30; x++) {
 
@@ -187,6 +187,12 @@ $(document).ready(function() {
 			}			
 			if(centinela) {				
 				comprobarRespuestas();
+				if (presultado == "APROBADO") {
+					alert("¡Felicidades! Has aprobado, sigue así.")
+				}
+				else {
+					alert("Lo siento, has suspendido. No te desanimes y sigue intentándolo...")
+				}
 				visibilidadBotones();				
 				mostrarResultado();
 			}			
