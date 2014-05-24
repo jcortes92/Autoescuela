@@ -63,19 +63,11 @@ function getRespuestas(){
 function visibilidadBotones(){
 	$("#botonCorregir").hide();
 	$("#botonAnterior").hide();
-	var centinela;
-	for(var x = 0; x < respuestas.length; x++){
-		if(isNaN(respuestas[x])){
-			centinela = false;
-			break;
-		}
-		centinela = true;
-	}
-	if(centinela && (respuestas.length == 30)) $("#botonCorregir").show();
 	
 	if(contadorPreguntas>3){
 		if(contadorPreguntas>=29){
 			$("#botonSiguiente").hide();
+			$("#botonCorregir").show();
 		} else {
 
 		}
@@ -173,8 +165,17 @@ $(document).ready(function() {
 		getRespuestas();
 		var boolSeguro = confirm("¿Estás seguro de que quieres corregir el test?");
 		if (boolSeguro){
-			comprobarRespuestas();
-			mostrarResultado();
+			var centinela;
+			for(var x = 0; x<respuestas.length;x++){
+				if (isNaN(respuestas[x])){
+					centinela=false;
+					alert("¡Te faltan preguntas por contestar!");
+					break;
+				}
+			}
+			if(centinela){comprobarRespuestas();
+			mostrarResultado();}
+			
 		}
 		
 	});
