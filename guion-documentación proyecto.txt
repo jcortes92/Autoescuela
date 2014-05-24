@@ -23,3 +23,11 @@ Martes 14/05/2014
 		- Jorge:
 			- Formulario
 			- Corrección preguntas
+
+Viernes 23/05/2014
+	- Proyecto 100% funcional
+	- Falta
+		- estilos
+		- mejor visibilidad de los botones
+		- añadir contador de preguntas contestadas en cualquier pantalla
+		- mencionar a @raulmoyareyes agradeciendo su base de datos https://github.com/RaulMoyaReyes/autoescuela HECHO

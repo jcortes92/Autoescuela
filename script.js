@@ -27,11 +27,11 @@ function mostrarPreguntas(){
 
 		$("#preguntasMostradas").append('<div class="preguntas"><br/>'+img+
 			'<p class="pregunta"><span class="numPregunta">' + (contadorPreguntas+1).toString()+'.</span>'+test[contadorPreguntas][0] + '</p>' + 
-			'<div class="respuesta"'+
-			'<li><ol><input type="radio" name="'+contadorPreguntas+'" value="1" >a) ' + test[contadorPreguntas][1] + '</ol>'+
-		'<ol><input type="radio"name="'+contadorPreguntas+'" value="2">b) ' + test[contadorPreguntas][2]+'</ol>'+
-		'<ol><input type="radio"name="'+contadorPreguntas+'" value="3">c) ' + test[contadorPreguntas][3]+'</ol>'+
-		'</li></div></div>');
+			'<div class="respuesta">'+
+			'<ol><input type="radio" name="'+contadorPreguntas+'" value="1" >a) ' + test[contadorPreguntas][1] + '</ol>'+
+			'<ol><input type="radio"name="'+contadorPreguntas+'" value="2">b) ' + test[contadorPreguntas][2]+'</ol>'+
+			'<ol><input type="radio"name="'+contadorPreguntas+'" value="3">c) ' + test[contadorPreguntas][3]+'</ol>'+
+			'</div></div>');
 
 		contadorPreguntas++;	
 	}
@@ -61,22 +61,26 @@ function getRespuestas(){
 }
 
 function visibilidadBotones(){
-	if(test.length==30) $("#botonCorregir").hide();
-	
-	if(contadorPreguntas<=3)
-	{
-		$("#botonAnterior").hide();
-	} 
-	else 
-		if(contadorPreguntas>3){
-			if(contadorPreguntas>=29){
-				$("#botonSiguiente").hide();
-				$("#botonCorregir").show();
-			} else {
-
-			}
-			$("#botonAnterior").show();
+	$("#botonCorregir").hide();
+	$("#botonAnterior").hide();
+	var centinela;
+	for(var x = 0; x < respuestas.length; x++){
+		if(isNaN(respuestas[x])){
+			centinela = false;
+			break;
 		}
+		centinela = true;
+	}
+	if(centinela && (respuestas.length == 30)) $("#botonCorregir").show();
+	
+	if(contadorPreguntas>3){
+		if(contadorPreguntas>=29){
+			$("#botonSiguiente").hide();
+		} else {
+
+		}
+		$("#botonAnterior").show();
+	}
 	
 }
 
@@ -120,11 +124,11 @@ function mostrarResultado() {
 
 		$("#preguntasMostradas").append('<div class="preguntas"><br/>'+img+
 			'<p class="pregunta"><span class="numPregunta">' + (x+1).toString()+'.</span>'+test[x][0] + '</p>' + 
-			'<div class="resRespuesta"'+
-			'<li><ol><input type="radio" name="'+x+'" value="1" style="display:none">a) ' + test[x][1] + '</ol>'+
+			'<div class="respuesta">'+
+			'<ol><input type="radio" name="'+x+'" value="1" style="display:none">a) ' + test[x][1] + '</ol>'+
 			'<ol><input type="radio"name="'+x+'" value="2" style="display:none">b) ' + test[x][2]+'</ol>'+
 			'<ol><input type="radio"name="'+x+'" value="3" style="display:none">c) ' + test[x][3]+'</ol>'+
-			'</li></div></div>');
+			'</div></div>');
 	}
 
 	//Muestra las respuestas correctas e incorrectas.
@@ -167,8 +171,12 @@ $(document).ready(function() {
 
 	$('#botonCorregir').click(function(){
 		getRespuestas();
-		comprobarRespuestas();
-		mostrarResultado();
+		var boolSeguro = confirm("¿Estás seguro de que quieres corregir el test?");
+		if (boolSeguro){
+			comprobarRespuestas();
+			mostrarResultado();
+		}
+		
 	});
 
 	function parse(document) {
