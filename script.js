@@ -5,7 +5,6 @@ var allData = []; //contenedor de contenedores de preguntas. Cada elemento será
 var bolsaNumeros = [];
 var aleatorios=[];
 var contadorPreguntas = 0;
-var contadorNuevoTest = contadorPreguntas + 1;
 var respuestas=[]; //contenedor para las respuestas
 var pfalladas=0;
 var pcontestadas=0;
@@ -195,6 +194,11 @@ $(document).ready(function() {
 		
 	});
 
+	$('#botonNuevoTest').click(function(){
+		contadorPreguntas = 0;
+		cargarPreguntas();
+	});
+
 	function parse(document) {
 		$(document).find("PREGUNTA").each(function() {
 		//contenedor de pregunta completa (item), con todos sus elementos.
@@ -210,7 +214,10 @@ $(document).ready(function() {
 		// console.log(item);
 		// console.log(allData);
 		});
+		cargarPreguntas();
+	}
 
+function cargarPreguntas() {
 		//SELECCIÓN ALEATORIA DE PREGUNTAS DE LA BASE DE DATOS
 		for(var i=0;i<allData.length;i++){
 			bolsaNumeros[i] = i; //aqui tenemos los 140 numeros posibles
