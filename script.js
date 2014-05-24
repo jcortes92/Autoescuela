@@ -7,9 +7,11 @@ var aleatorios=[];
 var contadorPreguntas = 0;
 var respuestas=[]; //contenedor para las respuestas
 var pfalladas=0;
-	var pcontestadas=0;
-	var pacertadas=0;
-	var presultado=0;
+var pcontestadas=0;
+var pacertadas=0;
+var presultado=0;
+var contadorTest=0;
+var contadorTestAprobados=0;
 
 
 
@@ -26,7 +28,7 @@ function mostrarPreguntas(){
 		else img = "";
 
 		$("#preguntasMostradas").append('<div class="preguntas"><br/>'+img+
-			'<p class="pregunta"><span class="numPregunta">' + (contadorPreguntas+1).toString()+'.</span>'+test[contadorPreguntas][0] + '</p>' + 
+			'<p class="pregunta"><span class="numPregunta">' + (contadorPreguntas+1).toString()+'. </span>'+test[contadorPreguntas][0] + '</p>' + 
 			'<div class="respuesta">'+
 			'<ol><input type="radio" name="'+contadorPreguntas+'" value="1" >a) ' + test[contadorPreguntas][1] + '</ol>'+
 			'<ol><input type="radio"name="'+contadorPreguntas+'" value="2">b) ' + test[contadorPreguntas][2]+'</ol>'+
@@ -92,9 +94,20 @@ function comprobarRespuestas(){
 	}
 	if (pfalladas > 2) {
 		presultado = "SUSPENDIDO"
+		//Suma 1 a tests realizados
+		contadorTest++;
+		$("#realizadosTotal").empty();
+		$("#realizadosTotal").append(contadorTest);
 	}
 	else {
-		presultado = "APROBADO"
+		presultado = "APROBADO"		
+		//Suma 1 a tests realizados
+		contadorTest++;
+		$("#realizadosTotal").empty();
+		$("#realizadosTotal").append(contadorTest);
+		contadorTestAprobados++;
+		$("#aprobadosTotal").empty();
+		$("#aprobadosTotal").append(contadorTestAprobados);
 	}}
 	
 function mostrarResultado() {
@@ -115,7 +128,7 @@ function mostrarResultado() {
 		else img = "";
 
 		$("#preguntasMostradas").append('<div class="preguntas"><br/>'+img+
-			'<p class="pregunta"><span class="numPregunta">' + (x+1).toString()+'.</span>'+test[x][0] + '</p>' + 
+			'<p class="pregunta"><span class="numPregunta">' + (x+1).toString()+'. </span>'+test[x][0] + '</p>' + 
 			'<div class="respuesta">'+
 			'<ol><input type="radio" name="'+x+'" value="1" style="display:none">a) ' + test[x][1] + '</ol>'+
 			'<ol><input type="radio"name="'+x+'" value="2" style="display:none">b) ' + test[x][2]+'</ol>'+
@@ -173,9 +186,10 @@ $(document).ready(function() {
 					break;
 				}
 			}
-			if(centinela){comprobarRespuestas();
-			mostrarResultado();}
-			
+			if(centinela) {
+				comprobarRespuestas();
+				mostrarResultado();
+			}			
 		}
 		
 	});
