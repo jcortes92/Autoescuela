@@ -65,17 +65,16 @@ function getRespuestas(){
 function visibilidadBotones(){
 	$("#botonCorregir").hide();
 	$("#botonAnterior").hide();
+	$("#botonNuevoTest").hide();
 	
 	if(contadorPreguntas>3){
-		if(contadorPreguntas>=29){
-			$("#botonSiguiente").hide();
-			$("#botonCorregir").show();
-		} else {
-
-		}
 		$("#botonAnterior").show();
 	}
 	
+	if(contadorPreguntas>=29){
+		$("#botonSiguiente").hide();
+		$("#botonCorregir").show();
+	}	
 }
 
 function comprobarRespuestas(){
@@ -130,9 +129,9 @@ function mostrarResultado() {
 		$("#preguntasMostradas").append('<div class="preguntas"><br/>'+img+
 			'<p class="pregunta"><span class="numPregunta">' + (x+1).toString()+'. </span>'+test[x][0] + '</p>' + 
 			'<div class="respuesta">'+
-			'<ol><input type="radio" name="'+x+'" value="1" style="display:none">a) ' + test[x][1] + '</ol>'+
-			'<ol><input type="radio"name="'+x+'" value="2" style="display:none">b) ' + test[x][2]+'</ol>'+
-			'<ol><input type="radio"name="'+x+'" value="3" style="display:none">c) ' + test[x][3]+'</ol>'+
+			'<ol><span><input type="radio" name="'+x+'" value="1" style="display:none">a) ' + test[x][1] + '</span></ol>'+
+			'<ol><span><input type="radio"name="'+x+'" value="2" style="display:none">b) ' + test[x][2]+'</span></ol>'+
+			'<ol><span><input type="radio"name="'+x+'" value="3" style="display:none">c) ' + test[x][3]+'</span></ol>'+
 			'</div></div>');
 	}
 
@@ -140,22 +139,12 @@ function mostrarResultado() {
 	for(var x = 0; x < 30; x++) {		
 
 		var $radios = $('input:radio[name='+x+']');
-		
 
-		if(isNaN(respuestas[x])||(respuestas[x]=='undefined')){
-			$radios.parent().addClass("error");
+		$radios.filter('[value='+test[x][4]+']').parent().addClass("acierto");
 
-
-
-		} else
-			if (respuestas[x] != test[x][4]) {			
-				// var $radios = $('input:radio[name='+x+']');
-				$radios.filter('[value='+respuestas[x]+']').parent().addClass("error");
-			}	 else {
-				$radios.filter('[value='+test[x][4]+']').parent().addClass("acierto");
-		}
-$radios.filter('[value='+test[x][4]+']').parent().removeClass("error").addClass("acierto");
-			
+		if (respuestas[x] != test[x][4]) {
+			$radios.filter('[value='+respuestas[x]+']').parent().addClass("error");
+		}	
 	}
 }
 
@@ -181,9 +170,12 @@ $(document).ready(function() {
 			var centinela;
 			for(var x = 0; x<respuestas.length;x++){
 				if (isNaN(respuestas[x])){
-					centinela=false;
+					centinela=true;
 					alert("¡Te faltan preguntas por contestar!");
 					break;
+				}
+				else {
+					centinela=true;
 				}
 			}
 			if(centinela) {
