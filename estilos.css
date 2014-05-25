@@ -59,8 +59,9 @@
 		border: 1px solid black;
 		margin-bottom: 0.2em;
 		padding: 0.1em;
-		background-image: url('src/fondoPregunta.jpg');
-		background-repeat: repeat;
+		background-color: white;
+		background-image: url('src/fondoPregunta.png');
+		background-repeat:inherit;
 	}
 	.respuesta, .pregunta{
 		width: 70%;
