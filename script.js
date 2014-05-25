@@ -177,7 +177,7 @@ $(document).ready(function() {
 			var centinela;
 			for(var x = 0; x<respuestas.length;x++){
 				if (isNaN(respuestas[x])){
-					centinela=true;
+					centinela=false;
 					alert("¡Te faltan preguntas por contestar!");
 					break;
 				}
