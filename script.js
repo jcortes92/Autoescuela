@@ -14,10 +14,11 @@ var contadorTest=0;
 var contadorTestAprobados=0;
 
 //Inicialización de respuestas[] para hacer pruebas
-for(var x= 0; x<30;x++){
-	respuestas[x]=1;
-}
+// for(var x= 0; x<30;x++){
+// 	respuestas[x]=1;
+// }
 
+alert("Este test consta de 30 preguntas. Para aprobar, no puedes cometer más de dos errores.  \n ¡Buena suerte!");
 
 function mostrarPreguntas(){
 	var y = contadorPreguntas;
@@ -69,7 +70,7 @@ function visibilidadBotones(){
 	$("#botonSiguiente").show();
 	$("#botonAnterior").hide();
 	$("#botonNuevoTest").hide();
-	// $("#botonCorregir").hide();
+	$("#botonCorregir").hide();
 	
 	if(contadorPreguntas > 3){
 		$("#botonAnterior").show();
@@ -145,7 +146,7 @@ function mostrarResultado() {
 			'</div></div>');
 	}
 
-	//Muestra las respuestas correctas e incorrectas.
+	//Marca las respuestas correctas e incorrectas.
 	for(var x = 0; x < 30; x++) {		
 
 		var $radios = $('input:radio[name='+x+']');
