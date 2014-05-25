@@ -13,6 +13,10 @@ var presultado=0;
 var contadorTest=0;
 var contadorTestAprobados=0;
 
+//Inicialización de respuestas[] para hacer pruebas
+for(var x= 0; x<30;x++){
+	respuestas[x]=1;
+}
 
 
 function mostrarPreguntas(){
@@ -26,7 +30,7 @@ function mostrarPreguntas(){
 		if(img!="no_image.png") img = '<img src="src/imagenes/'+ test[contadorPreguntas][6]+'"" style="float:right;" >';
 		else img = "";
 
-		$("#preguntasMostradas").append('<div class="preguntas"><br/>'+img+
+		$("#preguntasMostradas").append('<div class="preguntas">'+img+
 			'<p class="pregunta"><span class="numPregunta">' + (contadorPreguntas+1).toString()+'. </span>'+test[contadorPreguntas][0] + '</p>' + 
 			'<div class="respuesta">'+
 			'<ol><input type="radio" name="'+contadorPreguntas+'" value="1" >a) ' + test[contadorPreguntas][1] + '</ol>'+
@@ -65,7 +69,7 @@ function visibilidadBotones(){
 	$("#botonSiguiente").show();
 	$("#botonAnterior").hide();
 	$("#botonNuevoTest").hide();
-	$("#botonCorregir").hide();
+	// $("#botonCorregir").hide();
 	
 	if(contadorPreguntas > 3){
 		$("#botonAnterior").show();
@@ -120,11 +124,10 @@ function mostrarResultado() {
 
 	$("#preguntasMostradas").empty();
 	//Muestra la cabecera con la estadística.
-	$("#preguntasMostradas").append('<div class="estadistica"><br/> ' +
-				'<ol>' + 'Preguntas contestadas: ' + pcontestadas + '</ol>' +
+	$("#contenido").prepend('<div id="estadistica">' +
 				'<ol>' + 'Preguntas acertadas: ' + pacertadas + '</ol>' +
 				'<ol>' + 'Preguntas falladas: ' + pfalladas + '</ol>' +
-				'<ol>' + 'Resultado: ' + presultado + '</ol></id>')				
+				'<ol>' + 'Resultado: ' + presultado + '</ol></div>')				
 	//Muestra las preguntas.
 	for (var x = 0; x < 30; x++) {
 
@@ -133,7 +136,7 @@ function mostrarResultado() {
 		if(img!="no_image.png") img = '<img src="src/imagenes/'+ test[x][6]+'"" style="float:right;" >';
 		else img = "";
 
-		$("#preguntasMostradas").append('<div class="preguntas"><br/>'+img+
+		$("#preguntasMostradas").append('<div class="preguntas">'+img+
 			'<p class="pregunta"><span class="numPregunta">' + (x+1).toString()+'. </span>'+test[x][0] + '</p>' + 
 			'<div class="respuesta">'+
 			'<ol><span><input type="radio" name="'+x+'" value="1" style="display:none">a) ' + test[x][1] + '</span></ol>'+
@@ -174,10 +177,10 @@ $(document).ready(function() {
 		getRespuestas();
 		var boolSeguro = confirm("¿Estás seguro de que quieres corregir el test?");
 		if (boolSeguro){
-			var centinela;
+			var centinela = true;
 			for(var x = 0; x<respuestas.length;x++){
 				if (isNaN(respuestas[x])){
-					centinela=true;
+					centinela=false;
 					alert("¡Te faltan preguntas por contestar!");
 					break;
 				}
@@ -191,7 +194,7 @@ $(document).ready(function() {
 					alert("¡Felicidades! Has aprobado, sigue así.")
 				}
 				else {
-					alert("Lo siento, has suspendido. No te desanimes y sigue intentándolo...")
+					alert("Lo siento, has suspendido. No te desanimes y sigue intentándolo ;-)")
 				}
 				visibilidadBotones();				
 				mostrarResultado();

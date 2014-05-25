@@ -26,6 +26,7 @@
 	}
 	ol{
 		margin: 0px;
+
 	}
 	#contenedor{
 		background-image: url('src/fondo.jpg');
@@ -60,13 +61,13 @@
 	}
 	#realizadosTotal, #aprobadosTotal {
 		color: black;
-  		width: 200px;
-  		margin-left: auto;
-  		margin-right: auto;
-  		text-align: center;
+		width: 200px;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
 	}
 	#preguntasMostradas{
-		margin: 0 auto;
+		margin: 0;
 	}
 	.preguntas {
 		border: 1px solid black;
@@ -87,14 +88,17 @@
 	.acierto {
 		background-color: #4cb77c;
 	}
-	.estadistica {
+	#estadistica {
 		font-weight: bold;
 		font-size: 120%;
 		color: white;
+		margin-bottom: 1em;
+		text-shadow:1px 1px black;
+		clear: both;
 	}
 
 	.error {
-		background-color: #bd5740;
+		background-color: red;
 	}
 	.pregunta{
 		font-size: 110%;
@@ -140,8 +144,12 @@
 
 		<div id="superior">
 			<div id="encabezado"><h1>Test de coche (Permiso B)</h1></div>
-			<div id="realizados">TESTS APROBADOS<div id="aprobadosTotal">0</div></div>
-			<div id="aprobados">TESTS COMPLETADOS<div id="realizadosTotal">0</div></div>
+			<div id="realizados">TESTS APROBADOS
+				<div id="aprobadosTotal">0</div>
+			</div>
+			<div id="aprobados">TESTS COMPLETADOS
+				<div id="realizadosTotal">0</div>
+			</div>
 		</div>	
 
 		<div id="contenido" >
@@ -153,14 +161,14 @@
 				<input type="button" id="botonSiguiente" value="Siguiente">
 				<input type="button" id="botonCorregir" value="Corregir Test">
 				<input type="button" id="botonNuevoTest" value="Nuevo Test">					
-			<form>
-		</div>
-		
-		<footer style="clear: both;text-align: center; font-size:small;">
-			<p>
-				&copy; Copyright  by David Cabot & Jorge Cortés
-			</p>
-		</footer>
-	</div>
-</body>
-</html>
+				<form>
+				</div>
+
+				<footer style="clear: both;text-align: center; font-size:small;">
+					<p>
+						&copy; Copyright  by David Cabot & Jorge Cortés
+					</p>
+				</footer>
+			</div>
+		</body>
+		</html>
