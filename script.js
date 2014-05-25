@@ -34,7 +34,7 @@ function mostrarPreguntas(){
 		$("#preguntasMostradas").append('<div class="preguntas">'+img+
 			'<p class="pregunta"><span class="numPregunta">' + (contadorPreguntas+1).toString()+'. </span>'+test[contadorPreguntas][0] + '</p>' + 
 			'<div class="respuesta">'+
-			'<ol><input type="radio" name="'+contadorPreguntas+'" value="1" >a) ' + test[contadorPreguntas][1] + '</ol>'+
+			'<ol><input type="radio" name="'+contadorPreguntas+'" value="1">a) ' + test[contadorPreguntas][1] + '</ol>'+
 			'<ol><input type="radio"name="'+contadorPreguntas+'" value="2">b) ' + test[contadorPreguntas][2]+'</ol>'+
 			'<ol><input type="radio"name="'+contadorPreguntas+'" value="3">c) ' + test[contadorPreguntas][3]+'</ol>'+
 			'</div></div>');
@@ -65,7 +65,7 @@ function getRespuestas(){
 		TEMPcontadorPreguntas++;
 	}
 }
-1
+
 function visibilidadBotones(){
 	$("#botonSiguiente").show();
 	$("#botonAnterior").hide();
@@ -103,7 +103,7 @@ function comprobarRespuestas(){
 			pcontestadas++;
 		}
 	}
-	if (pfalladas > 2) {
+	if (pfalladas > 3) {
 		presultado = "SUSPENDIDO"
 		//Suma 1 a tests realizados
 		contadorTest++;
@@ -209,25 +209,36 @@ $(document).ready(function() {
 		cargarPreguntas();
 	});
 
+$.ajax({
+		url : 'src/preguntas.xml', // name of file you want to parse
+		dataType : "xml",
+		success : parse,
+		error : function() {
+			alert("Error: Algo ha ido mal...");
+		}
+	});
+
 	function parse(document) {
 		$(document).find("PREGUNTA").each(function() {
 		//contenedor de pregunta completa (item), con todos sus elementos.
-		var item = [];
+			var item = [];
 
-		//bucle que busca todas las componentes de cada item y las mete en un array
-		$(this).find("*").each(function() {
-			item.push($(this).text());
-		});
+			//bucle que busca todas las componentes de cada item y las mete en un array
+			$(this).find("*").each(function() {
+				item.push($(this).text());
+			});
 
-		//mete ese array en la siguiente posisición del array allData
-		allData.push(item);
-		// console.log(item);
-		// console.log(allData);
+			//mete ese array en la siguiente posisición del array allData
+			allData.push(item);
+
+			console.log(item);
+			
 		});
-		cargarPreguntas();
+		console.log(allData);
+		cargarPreguntasAleatorias();
 	}
 
-function cargarPreguntas() {
+function cargarPreguntasAleatorias() {
 		//SELECCIÓN ALEATORIA DE PREGUNTAS DE LA BASE DE DATOS
 		for(var i=0;i<allData.length;i++){
 			bolsaNumeros[i] = i; //aqui tenemos los 140 numeros posibles
@@ -241,17 +252,6 @@ function cargarPreguntas() {
 		}		
 		mostrarPreguntas();		
 }
-
-
-	$.ajax({
-		url : 'src/preguntas.xml', // name of file you want to parse
-		dataType : "xml",
-		success : parse,
-		error : function() {
-			alert("Error: Something went wrong");
-		}
-	});
-
 
 
 
