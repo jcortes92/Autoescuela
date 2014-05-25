@@ -7,10 +7,11 @@ var aleatorios=[];
 var contadorPreguntas = 0;
 var respuestas=[]; //contenedor para las respuestas
 var pfalladas=0;
-	var pcontestadas=0;
-	var pacertadas=0;
-	var presultado=0;
-
+var pcontestadas=0;
+var pacertadas=0;
+var presultado=0;
+var contadorTest=0;
+var contadorTestAprobados=0;
 
 
 
@@ -26,7 +27,7 @@ function mostrarPreguntas(){
 		else img = "";
 
 		$("#preguntasMostradas").append('<div class="preguntas"><br/>'+img+
-			'<p class="pregunta"><span class="numPregunta">' + (contadorPreguntas+1).toString()+'.</span>'+test[contadorPreguntas][0] + '</p>' + 
+			'<p class="pregunta"><span class="numPregunta">' + (contadorPreguntas+1).toString()+'. </span>'+test[contadorPreguntas][0] + '</p>' + 
 			'<div class="respuesta">'+
 			'<ol><input type="radio" name="'+contadorPreguntas+'" value="1" >a) ' + test[contadorPreguntas][1] + '</ol>'+
 			'<ol><input type="radio"name="'+contadorPreguntas+'" value="2">b) ' + test[contadorPreguntas][2]+'</ol>'+
@@ -59,24 +60,31 @@ function getRespuestas(){
 		TEMPcontadorPreguntas++;
 	}
 }
-
+1
 function visibilidadBotones(){
-	$("#botonCorregir").hide();
+	$("#botonSiguiente").show();
 	$("#botonAnterior").hide();
+	$("#botonNuevoTest").hide();
+	$("#botonCorregir").hide();
 	
-	if(contadorPreguntas>3){
-		if(contadorPreguntas>=29){
-			$("#botonSiguiente").hide();
-			$("#botonCorregir").show();
-		} else {
-
-		}
+	if(contadorPreguntas > 3){
 		$("#botonAnterior").show();
 	}
 	
+	if(contadorPreguntas == 30){
+		$("#botonSiguiente").hide();
+		$("#botonCorregir").show();
+	}
+
+	if(contadorPreguntas > 30){
+		$("#botonNuevoTest").show();
+		$("#botonSiguiente").hide();
+		$("#botonAnterior").hide();
+	}		
 }
 
 function comprobarRespuestas(){
+	contadorPreguntas++;
 	for(var x = 0; x < 30; x++) {
 		if (respuestas[x] != test[x][4]) {
 			pfalladas++;
@@ -92,20 +100,31 @@ function comprobarRespuestas(){
 	}
 	if (pfalladas > 2) {
 		presultado = "SUSPENDIDO"
+		//Suma 1 a tests realizados
+		contadorTest++;
+		$("#realizadosTotal").empty();
+		$("#realizadosTotal").append(contadorTest);
 	}
 	else {
-		presultado = "APROBADO"
+		presultado = "APROBADO"		
+		//Suma 1 a tests realizados
+		contadorTest++;
+		$("#realizadosTotal").empty();
+		$("#realizadosTotal").append(contadorTest);
+		contadorTestAprobados++;
+		$("#aprobadosTotal").empty();
+		$("#aprobadosTotal").append(contadorTestAprobados);
 	}}
 	
 function mostrarResultado() {
 
 	$("#preguntasMostradas").empty();
 	//Muestra la cabecera con la estadística.
-	$("#preguntasMostradas").append('<div class="preguntas"><br/> ' +
+	$("#preguntasMostradas").append('<div class="estadistica"><br/> ' +
 				'<ol>' + 'Preguntas contestadas: ' + pcontestadas + '</ol>' +
 				'<ol>' + 'Preguntas acertadas: ' + pacertadas + '</ol>' +
 				'<ol>' + 'Preguntas falladas: ' + pfalladas + '</ol>' +
-				'<ol>' + 'Resultado: ' + presultado + '</ol>')				
+				'<ol>' + 'Resultado: ' + presultado + '</ol></id>')				
 	//Muestra las preguntas.
 	for (var x = 0; x < 30; x++) {
 
@@ -115,11 +134,11 @@ function mostrarResultado() {
 		else img = "";
 
 		$("#preguntasMostradas").append('<div class="preguntas"><br/>'+img+
-			'<p class="pregunta"><span class="numPregunta">' + (x+1).toString()+'.</span>'+test[x][0] + '</p>' + 
+			'<p class="pregunta"><span class="numPregunta">' + (x+1).toString()+'. </span>'+test[x][0] + '</p>' + 
 			'<div class="respuesta">'+
-			'<ol><input type="radio" name="'+x+'" value="1" style="display:none">a) ' + test[x][1] + '</ol>'+
-			'<ol><input type="radio"name="'+x+'" value="2" style="display:none">b) ' + test[x][2]+'</ol>'+
-			'<ol><input type="radio"name="'+x+'" value="3" style="display:none">c) ' + test[x][3]+'</ol>'+
+			'<ol><span><input type="radio" name="'+x+'" value="1" style="display:none">a) ' + test[x][1] + '</span></ol>'+
+			'<ol><span><input type="radio"name="'+x+'" value="2" style="display:none">b) ' + test[x][2]+'</span></ol>'+
+			'<ol><span><input type="radio"name="'+x+'" value="3" style="display:none">c) ' + test[x][3]+'</span></ol>'+
 			'</div></div>');
 	}
 
@@ -127,22 +146,12 @@ function mostrarResultado() {
 	for(var x = 0; x < 30; x++) {		
 
 		var $radios = $('input:radio[name='+x+']');
-		
 
-		if(isNaN(respuestas[x])||(respuestas[x]=='undefined')){
-			$radios.parent().addClass("error");
+		$radios.filter('[value='+test[x][4]+']').parent().addClass("acierto");
 
-
-
-		} else
-			if (respuestas[x] != test[x][4]) {			
-				// var $radios = $('input:radio[name='+x+']');
-				$radios.filter('[value='+respuestas[x]+']').parent().addClass("error");
-			}	 else {
-				$radios.filter('[value='+test[x][4]+']').parent().addClass("acierto");
-		}
-$radios.filter('[value='+test[x][4]+']').parent().removeClass("error").addClass("acierto");
-			
+		if (respuestas[x] != test[x][4]) {
+			$radios.filter('[value='+respuestas[x]+']').parent().addClass("error");
+		}	
 	}
 }
 
@@ -168,16 +177,32 @@ $(document).ready(function() {
 			var centinela;
 			for(var x = 0; x<respuestas.length;x++){
 				if (isNaN(respuestas[x])){
-					centinela=false;
+					centinela=true;
 					alert("¡Te faltan preguntas por contestar!");
 					break;
 				}
-			}
-			if(centinela){comprobarRespuestas();
-			mostrarResultado();}
-			
+				else {
+					centinela=true;
+				}
+			}			
+			if(centinela) {				
+				comprobarRespuestas();
+				if (presultado == "APROBADO") {
+					alert("¡Felicidades! Has aprobado, sigue así.")
+				}
+				else {
+					alert("Lo siento, has suspendido. No te desanimes y sigue intentándolo...")
+				}
+				visibilidadBotones();				
+				mostrarResultado();
+			}			
 		}
 		
+	});
+
+	$('#botonNuevoTest').click(function(){
+		contadorPreguntas = 0;
+		cargarPreguntas();
 	});
 
 	function parse(document) {
@@ -195,7 +220,10 @@ $(document).ready(function() {
 		// console.log(item);
 		// console.log(allData);
 		});
+		cargarPreguntas();
+	}
 
+function cargarPreguntas() {
 		//SELECCIÓN ALEATORIA DE PREGUNTAS DE LA BASE DE DATOS
 		for(var i=0;i<allData.length;i++){
 			bolsaNumeros[i] = i; //aqui tenemos los 140 numeros posibles

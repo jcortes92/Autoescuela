@@ -4,8 +4,56 @@
 		"selected_items":
 		[
 			[
-				"margi",
-				"margin"
+				"back",
+				"background-color"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"paddin",
+				"padding-top"
+			],
+			[
+				"contador",
+				"contadorPreguntas"
+			],
+			[
+				"t",
+				"text-indent"
+			],
+			[
+				"conta",
+				"contadorTestAprobados"
+			],
+			[
+				"contadorTest",
+				"contadorTestAprobados"
+			],
+			[
+				"boton",
+				"botonNuevoTest"
+			],
+			[
+				"apr",
+				"aprobadosTotal"
+			],
+			[
+				"realiza",
+				"realizadosTotal"
+			],
+			[
+				"list",
+				"list-style-type"
+			],
+			[
+				"un",
+				"undefined"
+			],
+			[
+				"Cont",
+				"contadorPreguntas"
 			],
 			[
 				"text",
@@ -22,10 +70,6 @@
 			[
 				"border",
 				"border-color"
-			],
-			[
-				"font",
-				"font-size"
 			],
 			[
 				"fot",
@@ -46,10 +90,6 @@
 			[
 				"mostrar",
 				"mostrarSiguientes"
-			],
-			[
-				"conta",
-				"contadorPreguntas"
 			],
 			[
 				"st",
@@ -162,6 +202,10 @@
 			[
 				"margin",
 				"margin-right"
+			],
+			[
+				"margi",
+				"margin-top"
 			],
 			[
 				"preve",
@@ -343,12 +387,28 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 149.0,
+		"height": 334.0,
 		"selected_items":
 		[
 			[
-				"close",
-				"Project: Close"
+				"instla",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Discover Packages"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
 			],
 			[
 				"inden",
@@ -371,10 +431,6 @@
 				"Package Control: Install Package"
 			],
 			[
-				"pac",
-				"Package Control: Install Package"
-			],
-			[
 				"sass",
 				"SassBeautify"
 			],
@@ -389,13 +445,9 @@
 			[
 				"Pac",
 				"Package Control: Install Package"
-			],
-			[
-				"inst",
-				"Package Control: Install Package"
 			]
 		],
-		"width": 521.0
+		"width": 416.0
 	},
 	"console":
 	{
@@ -412,17 +464,20 @@
 	},
 	"file_history":
 	[
-		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/Autoescuela/guion-documentación proyecto.txt",
-		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/Autoescueladcab/xml-autescuela.sublime-project",
-		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/Autoescuela/index.html",
-		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/Autoescuela/script.js",
-		"/Users/jorgecortes/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
-		"/Users/jorgecortes/Library/Application Support/Sublime Text 2/Packages/User/Distraction Free.sublime-settings",
-		"/Users/jorgecortes/Library/Application Support/Sublime Text 2/Packages/User/JavaScript.sublime-settings",
+		"/D/GIT/Autoescuela/index.html",
+		"/D/GIT/Autoescuela/script.js",
+		"/C/Users/David/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/David/AppData/Roaming/Sublime Text 2/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/David/AppData/Roaming/Sublime Text 2/Packages/User/sublime-API-Completions-Package.sublime-settings",
+		"/D/GIT/Autoescuela/xml-autescuela.sublime-project",
+		"/D/GIT/Autoescuela/xml-autescuela.sublime-workspace",
+		"/D/GIT/Autoescuela/autoescuelaPreguntasTest.sql",
+		"/C/Users/David/AppData/Roaming/Sublime Text 2/Packages/User/SublimeServer.sublime-settings",
 		"/Users/jorgecortes/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
-		"/Users/jorgecortes/Library/Application Support/Sublime Text 2/Packages/User/SublimeServer.sublime-settings",
-		"/Users/jorgecortes/Library/Application Support/Sublime Text 2/Packages/User/JSON.sublime-settings",
+		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/Autoescuela/index.html",
 		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/Autoescuela/src/preguntas.xml",
+		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/Autoescuela/script.js",
+		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/Autoescuela/guion-documentación proyecto.txt",
 		"/Users/jorgecortes/Desktop/LLMA Autoescuela/Guion proyecto Autoescuela",
 		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/XML/Fotocopias/1-libros/1-libros.sublime-workspace",
 		"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/XML/Fotocopias/1-libros/1-libros.sublime-project",
@@ -503,10 +558,13 @@
 		"/Users/jorgecortes/Desktop/prueba.cs",
 		"/Users/jorgecortes/Desktop/dahlberg-widgetareas.html",
 		"/Users/jorgecortes/Library/Application Support/Sublime Text 2/Packages/User/sublime-API-Completions-Package.sublime-settings",
+		"/Users/jorgecortes/Library/Application Support/Sublime Text 2/Packages/User/JSON.sublime-settings",
 		"/Users/jorgecortes/Library/Application Support/Sublime Text 2/Packages/User/Package Control.sublime-settings",
+		"/Users/jorgecortes/Library/Application Support/Sublime Text 2/Packages/User/Distraction Free.sublime-settings",
 		"/Users/jorgecortes/Library/Application Support/Sublime Text 2/Packages/User/Plain text.sublime-settings",
 		"/Users/jorgecortes/Dropbox/FP ASIX/EXT4/CSharp/CSharp10/CSharp10/CSharp10/CSharp10-2.cs",
-		"/Users/jorgecortes/Downloads/Instaladores/testdisk-6.14/readme.txt"
+		"/Users/jorgecortes/Downloads/Instaladores/testdisk-6.14/readme.txt",
+		"/Users/jorgecortes/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings"
 	],
 	"find":
 	{
@@ -527,7 +585,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"titles",
+			"1",
+			"}\n",
+			"//	",
+			"contadorRespuestas",
 			"x",
 			"allData",
 			"pregunta",
@@ -644,7 +705,7 @@
 		[
 			[
 				"",
-				"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/PROYECTOS/Autoescuela/xml-autescuela.sublime-project"
+				"/Users/jorgecortes/Dropbox/FP ASIX/LLMA/XML/Fotocopias/1-libros/1-libros.sublime-project"
 			]
 		],
 		"width": 380.0
@@ -652,7 +713,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": true,
-	"side_bar_width": 264.0,
+	"side_bar_visible": false,
+	"side_bar_width": 284.0,
 	"status_bar_visible": true
 }
