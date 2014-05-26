@@ -1,6 +1,9 @@
 	* {
 		font-family:sans-serif;
 	}	
+	body{
+
+	}
 	h1 {
 		float: left;
 		padding-left: 0.5em;
@@ -12,12 +15,15 @@
 	}
 	ol{
 		margin: 0px;
+		line-height: 1%;
 
 	}
 	#contenedor{
 		background-image: url('src/fondo.jpg');
 		background-repeat: repeat;
 		width: 100%;	
+		border: 1px solid black;
+		font-size: small;
 	}
 	#menu {
 		width: 20%;
@@ -30,13 +36,14 @@
 		padding: 0.2em;
 		margin: 0 auto;
 		width: 90%;
-		font-size: small;
+
+		
 		padding-top: 6em;
 	}
 	#realizados, #aprobados {
 		float: right;
 		width: 200px;
-		padding: 2px;
+		padding: 1em;
 		font-weight: bold;
 		border: 1px solid;
 		color: black;
@@ -107,10 +114,12 @@
 	}
 	input{
 		margin: 10px;
+		font-size: 200%;
 	}
+
 	#botonAnterior, #botonSiguiente, #botonCorregir, #botonNuevoTest {
 		top:0%;
-		font-size: 200%;
+		
 	}
 	#botonSiguiente, #botonCorregir, #botonNuevoTest {
 		float: right;
