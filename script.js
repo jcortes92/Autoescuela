@@ -1,4 +1,5 @@
-//Declaración de variables
+
+// (function() {
 var test = []; //conjunto de 30 preguntas aleatorias
 var allData = []; //contenedor de contenedores de preguntas. Cada elemento será un array conteniendo una pregunta completa (con todos sus elementos)
 var bolsaNumeros = [];
@@ -16,8 +17,8 @@ var contadorTestAprobados=0;
 // for(var x= 0; x<30;x++){
 // 	respuestas[x]=1;
 // }
-//Mensaje de bienvenida
-alert("Este test consta de 30 preguntas. Para aprobar, no puedes cometer más de TRES errores.  \n ¡Buena suerte!");
+
+alert("Este test consta de 30 preguntas. Para aprobar, no puedes cometer más de dos errores.  \n ¡Buena suerte!");
 
 function mostrarPreguntas(){
 	var y = contadorPreguntas;
@@ -25,7 +26,11 @@ function mostrarPreguntas(){
 
 	for(var x = contadorPreguntas; x < y+3; x++){
 		
-		img = esImagen(test[x][6]);
+		//Si la imagen es nula, no mostrarla.
+		var img = test[contadorPreguntas][6];
+		if(img!="no_image.png") img = '<img src="src/imagenes/'+ test[contadorPreguntas][6]+'"" style="float:right;" >';
+		else img = "";
+
 		$("#preguntasMostradas").append('<div class="preguntas">'+img+
 			'<p class="pregunta"><span class="numPregunta">' + (contadorPreguntas+1).toString()+'. </span>'+test[contadorPreguntas][0] + '</p>' + 
 			'<div class="respuesta">'+
@@ -39,7 +44,19 @@ function mostrarPreguntas(){
 	visibilidadBotones();
 }
 
-function getRespuestas(){ //Guardar los valores de los radio buttons marcados en array respuestas[]
+function setRespuestas(){
+	var y = contadorPreguntas;
+	var TEMPcontadorPreguntas = contadorPreguntas-3;
+
+	for(var x = TEMPcontadorPreguntas; x < y; x++) {
+		// $("input[type='radio'][name='"+TEMPcontadorPreguntas+"'][val='"+respuestas[TEMPcontadorPreguntas]+"']").prop("checked", true);
+		var $radios = $('input:radio[name='+TEMPcontadorPreguntas+']');
+		$radios.filter('[value='+respuestas[TEMPcontadorPreguntas]+']').attr("checked",true); //http://blog.balfes.net/2013/01/31/getting-and-setting-radio-button-values-with-jquery/
+		TEMPcontadorPreguntas++;
+	}
+}
+
+function getRespuestas(){
 	var y = contadorPreguntas;
 	var TEMPcontadorPreguntas = contadorPreguntas-3;
 
@@ -48,19 +65,6 @@ function getRespuestas(){ //Guardar los valores de los radio buttons marcados en
 		TEMPcontadorPreguntas++;
 	}
 }
-
-function setRespuestas(){ //recupera los valores de respuestas[] y restaura los radio buttons:checked
-	var y = contadorPreguntas;
-	var TEMPcontadorPreguntas = contadorPreguntas-3;
-
-	for(var x = TEMPcontadorPreguntas; x < y; x++) {
-		var $radios = $('input:radio[name='+TEMPcontadorPreguntas+']');
-		$radios.filter('[value='+respuestas[TEMPcontadorPreguntas]+']').attr("checked",true); //http://blog.balfes.net/2013/01/31/getting-and-setting-radio-button-values-with-jquery/
-		TEMPcontadorPreguntas++;
-	}
-}
-
-
 
 function visibilidadBotones(){
 	$("#botonSiguiente").show();
@@ -115,11 +119,8 @@ function comprobarRespuestas(){
 		contadorTestAprobados++;
 		$("#aprobadosTotal").empty();
 		$("#aprobadosTotal").append(contadorTestAprobados);
-	}
-}
-
+	}}
 	
-
 function mostrarResultado() {
 
 	$("#preguntasMostradas").empty();
@@ -131,7 +132,11 @@ function mostrarResultado() {
 	//Muestra las preguntas.
 	for (var x = 0; x < 30; x++) {
 
-		img = esImagen(test[x][6]);
+		//Si la imagen es nula, no mostrarla.
+		var img = test[x][6];
+		if(img!="no_image.png") img = '<img src="src/imagenes/'+ test[x][6]+'"" style="float:right;" >';
+		else img = "";
+
 		$("#preguntasMostradas").append('<div class="preguntas">'+img+
 			'<p class="pregunta"><span class="numPregunta">' + (x+1).toString()+'. </span>'+test[x][0] + '</p>' + 
 			'<div class="respuesta">'+
@@ -153,11 +158,7 @@ function mostrarResultado() {
 		}	
 	}
 }
-function esImagen(imagen){ //Si la imagen es nula, no mostrarla.
-		if(imagen!="no_image.png") return imagen = '<img src="src/imagenesPreguntas/'+ imagen +'"" style="float:right;" >';
-		else return imagen = "";
-		
-	}
+
 $(document).ready(function() {
 
 	$('#botonSiguiente').click(function(){
@@ -200,6 +201,7 @@ $(document).ready(function() {
 				mostrarResultado();
 			}			
 		}
+		
 	});
 
 	$('#botonNuevoTest').click(function(){
@@ -207,8 +209,8 @@ $(document).ready(function() {
 		cargarPreguntas();
 	});
 
-	$.ajax({
-		url : 'src/preguntas.xml', // nombre del archivo que se quiere parsear
+$.ajax({
+		url : 'src/preguntas.xml', // name of file you want to parse
 		dataType : "xml",
 		success : parse,
 		error : function() {
@@ -226,7 +228,7 @@ $(document).ready(function() {
 				item.push($(this).text());
 			});
 
-			//mete ese array en la siguiente posisición del array allData[]
+			//mete ese array en la siguiente posisición del array allData
 			allData.push(item);
 
 			console.log(item);
@@ -236,21 +238,20 @@ $(document).ready(function() {
 		cargarPreguntasAleatorias();
 	}
 
-	function cargarPreguntasAleatorias() {
-
-			//SELECCIÓN ALEATORIA DE PREGUNTAS DE LA BASE DE DATOS
-			for(var i=0;i<allData.length;i++){
-				bolsaNumeros[i] = i; //aqui tenemos los 140 numeros posibles (posiciones de las 140 preguntas del xml)
-			}
-			for(var i=0;i<30;i++){
-				aleatorios[i] = Math.floor((Math.random() * bolsaNumeros.length)+1);
-				bolsaNumeros.splice(aleatorios[i],1);
-			}
-			for (var i =0;i<30;i++){
-				test[i] = allData[aleatorios[i]]
-			}		
-			mostrarPreguntas();		
-	}
+function cargarPreguntasAleatorias() {
+		//SELECCIÓN ALEATORIA DE PREGUNTAS DE LA BASE DE DATOS
+		for(var i=0;i<allData.length;i++){
+			bolsaNumeros[i] = i; //aqui tenemos los 140 numeros posibles
+		}
+		for(var i=0;i<30;i++){
+			aleatorios[i] = Math.floor((Math.random() * bolsaNumeros.length)+1);
+			bolsaNumeros.splice(aleatorios[i],1);
+		}
+		for (var i =0;i<30;i++){
+			test[i] = allData[aleatorios[i]]
+		}		
+		mostrarPreguntas();		
+}
 
 
 
