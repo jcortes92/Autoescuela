@@ -23,19 +23,20 @@ function mostrarPreguntas(){
 	var y = contadorPreguntas;
 	$("#preguntasMostradas").empty();
 
-	for(var x = contadorPreguntas; x < y+3; x++){
+	// for(var x = contadorPreguntas; x < y+3; x++){
+		for(contadorPreguntas; contadorPreguntas < y+3; contadorPreguntas++){
 		
-		img = esImagen(test[x][6]);
+		img = esImagen(test[contadorPreguntas][6]);
 		$("#preguntasMostradas").append('<div class="preguntas">'+img+
 			'<p class="pregunta"><span class="numPregunta">' + (contadorPreguntas+1).toString()+'. </span>'+test[contadorPreguntas][0] + '</p>' + 
-			'<div class="respuesta">'+
-			'<ol><input type="radio" name="'+contadorPreguntas+'" value="1">a) ' + test[contadorPreguntas][1] + '</ol>'+
-			'<ol><input type="radio"name="'+contadorPreguntas+'" value="2">b) ' + test[contadorPreguntas][2]+'</ol>'+
-			'<ol><input type="radio"name="'+contadorPreguntas+'" value="3">c) ' + test[contadorPreguntas][3]+'</ol>'+
+			'<div class="respuesta">'+ //Seleccionar radio button cuando se haga click en el texto que le siga http://stackoverflow.com/questions/7863251/clicking-the-text-to-select-corresponding-radio-button
+			'<ol><input type="radio" id="optionRadio'+contadorPreguntas +'" name="'+contadorPreguntas+'" value="1"><label for="optionRadio'+contadorPreguntas+'">a) '+ test[contadorPreguntas][1]+'</label></ol>'+
+			'<ol><input type="radio" id="optionRadio'+contadorPreguntas+1 +'" name="'+contadorPreguntas+'" value="2"><label for="optionRadio'+contadorPreguntas+1+'">b) '+ test[contadorPreguntas][2]+'</label></ol>'+
+			'<ol><input type="radio" id="optionRadio'+contadorPreguntas+2 +'" name="'+contadorPreguntas+'" value="3"><label for="optionRadio'+contadorPreguntas+2+'">c) '+ test[contadorPreguntas][3]+'</label></ol>'+
 			'</div></div>');
-
-		contadorPreguntas++;	
+		// contadorPreguntas++;	
 	}
+
 	visibilidadBotones();
 }
 
